@@ -5,7 +5,7 @@ from collections.abc import Callable
 from cachetools import LRUCache
 
 
-class SmartLRUCache(LRUCache):
+class SmartLRUCache[K, V](LRUCache):
     """
     An LRU cache that supports an eviction callback.
     """

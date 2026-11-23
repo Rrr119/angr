@@ -23,6 +23,19 @@ SIMPLIFY_EXIT_GUARD = "SIMPLIFY_EXIT_GUARD"
 SIMPLIFY_CONSTRAINTS = "SIMPLIFY_CONSTRAINTS"
 SIMPLIFY_MERGED_CONSTRAINTS = "SIMPLIFY_MERGED_CONSTRAINTS"
 
+# Opt-in, solver-free simplification of each path constraint before it reaches the
+# backend solver (boolean flattening/deduplication, subsumption and constant
+# folding). See angr.state_plugins.constraint_simplification.
+CONSTRAINT_SIMPLIFICATION = "CONSTRAINT_SIMPLIFICATION"
+# Cache simplified constraints in a process-wide LRU so structurally-identical
+# constraints (the shared prefixes of forked states) are rewritten only once.
+# Only takes effect when CONSTRAINT_SIMPLIFICATION is enabled.
+CONSTRAINT_SIMPLIFICATION_CACHE = "CONSTRAINT_SIMPLIFICATION_CACHE"
+# Eliminate compound subexpressions shared across a batch of constraints by
+# introducing named symbols and defining equalities. Requires
+# CONSTRAINT_SIMPLIFICATION.
+CONSTRAINT_SIMPLIFICATION_CSE = "CONSTRAINT_SIMPLIFICATION_CSE"
+
 # This option controls whether the helper functions are actually executed for CCALL expressions.
 # Without this, the arguments are parsed, but the calls aren't executed, and an unconstrained symbolic
 # variable is returned, instead.

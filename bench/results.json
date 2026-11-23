@@ -1,0 +1,3185 @@
+{
+  "summary": {
+    "samples": 50,
+    "total_baseline_s": 6.415774515990051,
+    "total_strategy_s": 6.195274948957376,
+    "total_cached_s": 6.123581931984518,
+    "strategy_speedup": 1.0355915708099095,
+    "cached_speedup": 1.047715958935629,
+    "cached_vs_strategy_speedup": 1.011707692943307,
+    "per_sample_cached_speedup_median": 1.0005927722654113,
+    "per_sample_cached_speedup_min": 0.9070832326848703,
+    "per_sample_cached_speedup_max": 2.193094374747025,
+    "per_sample_cached_wins": 26,
+    "raw_constraint_nodes": 29494,
+    "simplified_constraint_nodes": 29494,
+    "node_reduction": 0.0,
+    "raw_constraint_depth": 17414,
+    "simplified_constraint_depth": 17414,
+    "depth_reduction": 0.0,
+    "cse_constraint_nodes": 13872,
+    "cse_constraint_depth": 8538,
+    "cse_node_reduction": 0.5296670509256121,
+    "cse_depth_reduction": 0.509704835190077,
+    "total_uncached_rewrite_s": 0.0010084825975354762,
+    "total_cached_rewrite_s": 0.0006916809055837802,
+    "total_raw_query_s": 0.04361809759866446,
+    "total_cse_query_s": 0.038158859193208626,
+    "query_speedup_median": 1.1375905830335058,
+    "cache_hits": 24856,
+    "cache_misses": 653,
+    "cache_hit_rate": 0.97440119173625
+  },
+  "records": [
+    {
+      "sample": "sample_00_branch",
+      "baseline": {
+        "deadended": 11,
+        "constraints": 44,
+        "constraint_depth": 346,
+        "constraint_nodes": 592,
+        "elapsed_mean": 0.1471713986635829,
+        "elapsed_median": 0.15179902499949094,
+        "elapsed_min": 0.13159850999363698
+      },
+      "strategy": {
+        "deadended": 11,
+        "constraints": 44,
+        "constraint_depth": 346,
+        "constraint_nodes": 592,
+        "elapsed_mean": 0.15270850033751535,
+        "elapsed_median": 0.151928585008136,
+        "elapsed_min": 0.1345711210014997
+      },
+      "cached": {
+        "deadended": 11,
+        "constraints": 44,
+        "constraint_depth": 346,
+        "constraint_nodes": 592,
+        "cache": {
+          "size": 30,
+          "maxsize": 4096,
+          "hits": 24,
+          "misses": 30,
+          "hit_rate": 0.4444444444444444
+        },
+        "elapsed_mean": 0.11849017166241538,
+        "elapsed_median": 0.11886860099912155,
+        "elapsed_min": 0.1154547539917985
+      },
+      "micro": {
+        "n_constraints": 44,
+        "uncached_rewrite_s": 1.7342399223707618e-05,
+        "cached_rewrite_s": 1.986050046980381e-05,
+        "rewrite_speedup": 0.8732105845003881,
+        "raw_depth": 346,
+        "simplified_depth": 346,
+        "depth_reduction": 0.0,
+        "raw_nodes": 592,
+        "simplified_nodes": 592,
+        "node_reduction": 0.0,
+        "cse_depth": 238,
+        "cse_nodes": 399,
+        "cse_depth_reduction": 0.3121387283236994,
+        "cse_node_reduction": 0.3260135135135135,
+        "raw_query_s": 0.0010148328001378104,
+        "cse_query_s": 0.0009567896020598709,
+        "query_speedup": 1.0606645368563563,
+        "cache": {
+          "size": 24,
+          "maxsize": 4096,
+          "hits": 460,
+          "misses": 24,
+          "hit_rate": 0.9504132231404959
+        }
+      }
+    },
+    {
+      "sample": "sample_01_loop",
+      "baseline": {
+        "deadended": 3,
+        "constraints": 9,
+        "constraint_depth": 69,
+        "constraint_nodes": 120,
+        "elapsed_mean": 0.07509489999695991,
+        "elapsed_median": 0.07138354099879507,
+        "elapsed_min": 0.06510913200327195
+      },
+      "strategy": {
+        "deadended": 3,
+        "constraints": 9,
+        "constraint_depth": 69,
+        "constraint_nodes": 120,
+        "elapsed_mean": 0.08684992999769747,
+        "elapsed_median": 0.081060198994237,
+        "elapsed_min": 0.07747591299994383
+      },
+      "cached": {
+        "deadended": 3,
+        "constraints": 9,
+        "constraint_depth": 69,
+        "constraint_nodes": 120,
+        "cache": {
+          "size": 8,
+          "maxsize": 4096,
+          "hits": 32,
+          "misses": 8,
+          "hit_rate": 0.8
+        },
+        "elapsed_mean": 0.0709903450042475,
+        "elapsed_median": 0.0709664040041389,
+        "elapsed_min": 0.06831933200010099
+      },
+      "micro": {
+        "n_constraints": 9,
+        "uncached_rewrite_s": 5.285200313664973e-06,
+        "cached_rewrite_s": 5.106200114823878e-06,
+        "rewrite_speedup": 1.03505546097213,
+        "raw_depth": 69,
+        "simplified_depth": 69,
+        "depth_reduction": 0.0,
+        "raw_nodes": 120,
+        "simplified_nodes": 120,
+        "node_reduction": 0.0,
+        "cse_depth": 49,
+        "cse_nodes": 82,
+        "cse_depth_reduction": 0.28985507246376807,
+        "cse_node_reduction": 0.31666666666666665,
+        "raw_query_s": 0.0007761187996948137,
+        "cse_query_s": 0.000655465800082311,
+        "query_speedup": 1.184072150823661,
+        "cache": {
+          "size": 5,
+          "maxsize": 4096,
+          "hits": 94,
+          "misses": 5,
+          "hit_rate": 0.9494949494949495
+        }
+      }
+    },
+    {
+      "sample": "sample_02_switch",
+      "baseline": {
+        "deadended": 6,
+        "constraints": 26,
+        "constraint_depth": 188,
+        "constraint_nodes": 301,
+        "elapsed_mean": 0.08201238866604399,
+        "elapsed_median": 0.08132075601315591,
+        "elapsed_min": 0.08130809498834424
+      },
+      "strategy": {
+        "deadended": 6,
+        "constraints": 26,
+        "constraint_depth": 188,
+        "constraint_nodes": 301,
+        "elapsed_mean": 0.08266618200286757,
+        "elapsed_median": 0.08157739200396463,
+        "elapsed_min": 0.08152038700063713
+      },
+      "cached": {
+        "deadended": 6,
+        "constraints": 26,
+        "constraint_depth": 188,
+        "constraint_nodes": 301,
+        "cache": {
+          "size": 18,
+          "maxsize": 4096,
+          "hits": 14,
+          "misses": 18,
+          "hit_rate": 0.4375
+        },
+        "elapsed_mean": 0.08365807166167845,
+        "elapsed_median": 0.08440019999397919,
+        "elapsed_min": 0.08157663499878254
+      },
+      "micro": {
+        "n_constraints": 26,
+        "uncached_rewrite_s": 1.0971300071105361e-05,
+        "cached_rewrite_s": 8.523199358023704e-06,
+        "rewrite_speedup": 1.2872279070625077,
+        "raw_depth": 188,
+        "simplified_depth": 188,
+        "depth_reduction": 0.0,
+        "raw_nodes": 301,
+        "simplified_nodes": 301,
+        "node_reduction": 0.0,
+        "cse_depth": 68,
+        "cse_nodes": 105,
+        "cse_depth_reduction": 0.6382978723404256,
+        "cse_node_reduction": 0.6511627906976745,
+        "raw_query_s": 0.0007261035992996767,
+        "cse_query_s": 0.0006409836001694203,
+        "query_speedup": 1.1327959078949261,
+        "cache": {
+          "size": 13,
+          "maxsize": 4096,
+          "hits": 273,
+          "misses": 13,
+          "hit_rate": 0.9545454545454546
+        }
+      }
+    },
+    {
+      "sample": "sample_03_mixed",
+      "baseline": {
+        "deadended": 3,
+        "constraints": 6,
+        "constraint_depth": 42,
+        "constraint_nodes": 72,
+        "elapsed_mean": 0.050898656991194,
+        "elapsed_median": 0.050659679996897466,
+        "elapsed_min": 0.04912571198656224
+      },
+      "strategy": {
+        "deadended": 3,
+        "constraints": 6,
+        "constraint_depth": 42,
+        "constraint_nodes": 72,
+        "elapsed_mean": 0.04871292633470148,
+        "elapsed_median": 0.04859529899840709,
+        "elapsed_min": 0.048006596000050195
+      },
+      "cached": {
+        "deadended": 3,
+        "constraints": 6,
+        "constraint_depth": 42,
+        "constraint_nodes": 72,
+        "cache": {
+          "size": 8,
+          "maxsize": 4096,
+          "hits": 8,
+          "misses": 8,
+          "hit_rate": 0.5
+        },
+        "elapsed_mean": 0.048935963665523254,
+        "elapsed_median": 0.04915333499957342,
+        "elapsed_min": 0.04827337800816167
+      },
+      "micro": {
+        "n_constraints": 6,
+        "uncached_rewrite_s": 5.902099655941129e-06,
+        "cached_rewrite_s": 4.409100802149623e-06,
+        "rewrite_speedup": 1.3386175369507554,
+        "raw_depth": 42,
+        "simplified_depth": 42,
+        "depth_reduction": 0.0,
+        "raw_nodes": 72,
+        "simplified_nodes": 72,
+        "node_reduction": 0.0,
+        "cse_depth": 26,
+        "cse_nodes": 42,
+        "cse_depth_reduction": 0.38095238095238093,
+        "cse_node_reduction": 0.41666666666666663,
+        "raw_query_s": 0.0007707207987550646,
+        "cse_query_s": 0.0006558619992574677,
+        "query_speedup": 1.1751264742089556,
+        "cache": {
+          "size": 5,
+          "maxsize": 4096,
+          "hits": 61,
+          "misses": 5,
+          "hit_rate": 0.9242424242424242
+        }
+      }
+    },
+    {
+      "sample": "sample_04_branch",
+      "baseline": {
+        "deadended": 14,
+        "constraints": 69,
+        "constraint_depth": 515,
+        "constraint_nodes": 879,
+        "elapsed_mean": 0.15256493500298043,
+        "elapsed_median": 0.1513774960039882,
+        "elapsed_min": 0.1493565390119329
+      },
+      "strategy": {
+        "deadended": 14,
+        "constraints": 69,
+        "constraint_depth": 515,
+        "constraint_nodes": 879,
+        "elapsed_mean": 0.1536846696641684,
+        "elapsed_median": 0.15047821999178268,
+        "elapsed_min": 0.14942854900436942
+      },
+      "cached": {
+        "deadended": 14,
+        "constraints": 69,
+        "constraint_depth": 515,
+        "constraint_nodes": 879,
+        "cache": {
+          "size": 42,
+          "maxsize": 4096,
+          "hits": 30,
+          "misses": 42,
+          "hit_rate": 0.4166666666666667
+        },
+        "elapsed_mean": 0.15703937266759263,
+        "elapsed_median": 0.1560706210002536,
+        "elapsed_min": 0.15393927300465293
+      },
+      "micro": {
+        "n_constraints": 69,
+        "uncached_rewrite_s": 3.3054799132514745e-05,
+        "cached_rewrite_s": 3.207179979654029e-05,
+        "rewrite_speedup": 1.0306499585994702,
+        "raw_depth": 515,
+        "simplified_depth": 515,
+        "depth_reduction": 0.0,
+        "raw_nodes": 879,
+        "simplified_nodes": 879,
+        "node_reduction": 0.0,
+        "cse_depth": 374,
+        "cse_nodes": 625,
+        "cse_depth_reduction": 0.27378640776699026,
+        "cse_node_reduction": 0.2889647326507395,
+        "raw_query_s": 0.0011907179985428229,
+        "cse_query_s": 0.0010172485985094682,
+        "query_speedup": 1.1705280305006387,
+        "cache": {
+          "size": 33,
+          "maxsize": 4096,
+          "hits": 726,
+          "misses": 33,
+          "hit_rate": 0.9565217391304348
+        }
+      }
+    },
+    {
+      "sample": "sample_05_loop",
+      "baseline": {
+        "deadended": 5,
+        "constraints": 20,
+        "constraint_depth": 155,
+        "constraint_nodes": 270,
+        "elapsed_mean": 0.20912690100279482,
+        "elapsed_median": 0.20886994199827313,
+        "elapsed_min": 0.1014441639999859
+      },
+      "strategy": {
+        "deadended": 5,
+        "constraints": 20,
+        "constraint_depth": 155,
+        "constraint_nodes": 270,
+        "elapsed_mean": 0.0948738813312957,
+        "elapsed_median": 0.09517835300357547,
+        "elapsed_min": 0.09306136099621654
+      },
+      "cached": {
+        "deadended": 5,
+        "constraints": 20,
+        "constraint_depth": 155,
+        "constraint_nodes": 270,
+        "cache": {
+          "size": 10,
+          "maxsize": 4096,
+          "hits": 54,
+          "misses": 10,
+          "hit_rate": 0.84375
+        },
+        "elapsed_mean": 0.09611055133185194,
+        "elapsed_median": 0.09523983299732208,
+        "elapsed_min": 0.09250785699987318
+      },
+      "micro": {
+        "n_constraints": 20,
+        "uncached_rewrite_s": 9.016200783662498e-06,
+        "cached_rewrite_s": 6.939200102351606e-06,
+        "rewrite_speedup": 1.299314135732593,
+        "raw_depth": 155,
+        "simplified_depth": 155,
+        "depth_reduction": 0.0,
+        "raw_nodes": 270,
+        "simplified_nodes": 270,
+        "node_reduction": 0.0,
+        "cse_depth": 89,
+        "cse_nodes": 147,
+        "cse_depth_reduction": 0.4258064516129032,
+        "cse_node_reduction": 0.4555555555555556,
+        "raw_query_s": 0.0006589120021089911,
+        "cse_query_s": 0.0006394636002369225,
+        "query_speedup": 1.0304136183277093,
+        "cache": {
+          "size": 8,
+          "maxsize": 4096,
+          "hits": 212,
+          "misses": 8,
+          "hit_rate": 0.9636363636363636
+        }
+      }
+    },
+    {
+      "sample": "sample_06_switch",
+      "baseline": {
+        "deadended": 5,
+        "constraints": 17,
+        "constraint_depth": 127,
+        "constraint_nodes": 207,
+        "elapsed_mean": 0.07076786666584667,
+        "elapsed_median": 0.07095207400561776,
+        "elapsed_min": 0.0651005819963757
+      },
+      "strategy": {
+        "deadended": 5,
+        "constraints": 17,
+        "constraint_depth": 127,
+        "constraint_nodes": 207,
+        "elapsed_mean": 0.06962444333476014,
+        "elapsed_median": 0.07008184300502762,
+        "elapsed_min": 0.06813954199606087
+      },
+      "cached": {
+        "deadended": 5,
+        "constraints": 17,
+        "constraint_depth": 127,
+        "constraint_nodes": 207,
+        "cache": {
+          "size": 14,
+          "maxsize": 4096,
+          "hits": 12,
+          "misses": 14,
+          "hit_rate": 0.46153846153846156
+        },
+        "elapsed_mean": 0.06735408700478729,
+        "elapsed_median": 0.06786924001062289,
+        "elapsed_min": 0.06610373700095806
+      },
+      "micro": {
+        "n_constraints": 17,
+        "uncached_rewrite_s": 8.180200529750436e-06,
+        "cached_rewrite_s": 6.651200237683952e-06,
+        "rewrite_speedup": 1.2298833650208831,
+        "raw_depth": 127,
+        "simplified_depth": 127,
+        "depth_reduction": 0.0,
+        "raw_nodes": 207,
+        "simplified_nodes": 207,
+        "node_reduction": 0.0,
+        "cse_depth": 50,
+        "cse_nodes": 78,
+        "cse_depth_reduction": 0.6062992125984252,
+        "cse_node_reduction": 0.6231884057971014,
+        "raw_query_s": 0.0006974507996346802,
+        "cse_query_s": 0.0006123207975178957,
+        "query_speedup": 1.1390284348692181,
+        "cache": {
+          "size": 10,
+          "maxsize": 4096,
+          "hits": 177,
+          "misses": 10,
+          "hit_rate": 0.946524064171123
+        }
+      }
+    },
+    {
+      "sample": "sample_07_mixed",
+      "baseline": {
+        "deadended": 16,
+        "constraints": 72,
+        "constraint_depth": 504,
+        "constraint_nodes": 824,
+        "elapsed_mean": 0.17942716166726314,
+        "elapsed_median": 0.17796747299144045,
+        "elapsed_min": 0.177418243009015
+      },
+      "strategy": {
+        "deadended": 16,
+        "constraints": 72,
+        "constraint_depth": 504,
+        "constraint_nodes": 824,
+        "elapsed_mean": 0.17801440233597532,
+        "elapsed_median": 0.175634176004678,
+        "elapsed_min": 0.17438095599936787
+      },
+      "cached": {
+        "deadended": 16,
+        "constraints": 72,
+        "constraint_depth": 504,
+        "constraint_nodes": 824,
+        "cache": {
+          "size": 16,
+          "maxsize": 4096,
+          "hits": 58,
+          "misses": 16,
+          "hit_rate": 0.7837837837837838
+        },
+        "elapsed_mean": 0.18470725700414428,
+        "elapsed_median": 0.18196562500088476,
+        "elapsed_min": 0.18060769300791435
+      },
+      "micro": {
+        "n_constraints": 72,
+        "uncached_rewrite_s": 3.2989800092764196e-05,
+        "cached_rewrite_s": 1.95235013961792e-05,
+        "rewrite_speedup": 1.6897481360193098,
+        "raw_depth": 504,
+        "simplified_depth": 504,
+        "depth_reduction": 0.0,
+        "raw_nodes": 824,
+        "simplified_nodes": 824,
+        "node_reduction": 0.0,
+        "cse_depth": 165,
+        "cse_nodes": 251,
+        "cse_depth_reduction": 0.6726190476190477,
+        "cse_node_reduction": 0.6953883495145632,
+        "raw_query_s": 0.0009051339991856366,
+        "cse_query_s": 0.0007395900000119581,
+        "query_speedup": 1.2238321220825077,
+        "cache": {
+          "size": 13,
+          "maxsize": 4096,
+          "hits": 779,
+          "misses": 13,
+          "hit_rate": 0.9835858585858586
+        }
+      }
+    },
+    {
+      "sample": "sample_08_branch",
+      "baseline": {
+        "deadended": 6,
+        "constraints": 18,
+        "constraint_depth": 126,
+        "constraint_nodes": 216,
+        "elapsed_mean": 0.09534091166278813,
+        "elapsed_median": 0.0924671499960823,
+        "elapsed_min": 0.07786563999252394
+      },
+      "strategy": {
+        "deadended": 6,
+        "constraints": 18,
+        "constraint_depth": 126,
+        "constraint_nodes": 216,
+        "elapsed_mean": 0.07778234766738024,
+        "elapsed_median": 0.07837190899590496,
+        "elapsed_min": 0.07577888600644656
+      },
+      "cached": {
+        "deadended": 6,
+        "constraints": 18,
+        "constraint_depth": 126,
+        "constraint_nodes": 216,
+        "cache": {
+          "size": 14,
+          "maxsize": 4096,
+          "hits": 14,
+          "misses": 14,
+          "hit_rate": 0.5
+        },
+        "elapsed_mean": 0.07199400833148199,
+        "elapsed_median": 0.07184080500155687,
+        "elapsed_min": 0.07164885899692308
+      },
+      "micro": {
+        "n_constraints": 18,
+        "uncached_rewrite_s": 8.465199789498001e-06,
+        "cached_rewrite_s": 6.986199878156185e-06,
+        "rewrite_speedup": 1.211703062771825,
+        "raw_depth": 126,
+        "simplified_depth": 126,
+        "depth_reduction": 0.0,
+        "raw_nodes": 216,
+        "simplified_nodes": 216,
+        "node_reduction": 0.0,
+        "cse_depth": 64,
+        "cse_nodes": 102,
+        "cse_depth_reduction": 0.4920634920634921,
+        "cse_node_reduction": 0.5277777777777778,
+        "raw_query_s": 0.0007419000001391395,
+        "cse_query_s": 0.0007134171988582239,
+        "query_speedup": 1.03992446681479,
+        "cache": {
+          "size": 11,
+          "maxsize": 4096,
+          "hits": 187,
+          "misses": 11,
+          "hit_rate": 0.9444444444444444
+        }
+      }
+    },
+    {
+      "sample": "sample_09_loop",
+      "baseline": {
+        "deadended": 6,
+        "constraints": 30,
+        "constraint_depth": 234,
+        "constraint_nodes": 408,
+        "elapsed_mean": 0.12045782100176439,
+        "elapsed_median": 0.11954169500677381,
+        "elapsed_min": 0.11764658099855296
+      },
+      "strategy": {
+        "deadended": 6,
+        "constraints": 30,
+        "constraint_depth": 234,
+        "constraint_nodes": 408,
+        "elapsed_mean": 0.119403836671457,
+        "elapsed_median": 0.11882242599676829,
+        "elapsed_min": 0.11814106001111213
+      },
+      "cached": {
+        "deadended": 6,
+        "constraints": 30,
+        "constraint_depth": 234,
+        "constraint_nodes": 408,
+        "cache": {
+          "size": 12,
+          "maxsize": 4096,
+          "hits": 76,
+          "misses": 12,
+          "hit_rate": 0.8636363636363636
+        },
+        "elapsed_mean": 0.12119789966770138,
+        "elapsed_median": 0.120647639996605,
+        "elapsed_min": 0.12015884600987192
+      },
+      "micro": {
+        "n_constraints": 30,
+        "uncached_rewrite_s": 1.1488299060147256e-05,
+        "cached_rewrite_s": 8.996301039587706e-06,
+        "rewrite_speedup": 1.2770025157666085,
+        "raw_depth": 234,
+        "simplified_depth": 234,
+        "depth_reduction": 0.0,
+        "raw_nodes": 408,
+        "simplified_nodes": 408,
+        "node_reduction": 0.0,
+        "cse_depth": 122,
+        "cse_nodes": 200,
+        "cse_depth_reduction": 0.4786324786324786,
+        "cse_node_reduction": 0.5098039215686274,
+        "raw_query_s": 0.000748515798477456,
+        "cse_query_s": 0.0006515820015920327,
+        "query_speedup": 1.1487668423139092,
+        "cache": {
+          "size": 10,
+          "maxsize": 4096,
+          "hits": 320,
+          "misses": 10,
+          "hit_rate": 0.9696969696969697
+        }
+      }
+    },
+    {
+      "sample": "sample_10_switch",
+      "baseline": {
+        "deadended": 6,
+        "constraints": 26,
+        "constraint_depth": 188,
+        "constraint_nodes": 301,
+        "elapsed_mean": 0.08510540133769003,
+        "elapsed_median": 0.08476058801170439,
+        "elapsed_min": 0.08173172699753195
+      },
+      "strategy": {
+        "deadended": 6,
+        "constraints": 26,
+        "constraint_depth": 188,
+        "constraint_nodes": 301,
+        "elapsed_mean": 0.08415219733433332,
+        "elapsed_median": 0.08415756399335805,
+        "elapsed_min": 0.07907089100626763
+      },
+      "cached": {
+        "deadended": 6,
+        "constraints": 26,
+        "constraint_depth": 188,
+        "constraint_nodes": 301,
+        "cache": {
+          "size": 18,
+          "maxsize": 4096,
+          "hits": 14,
+          "misses": 18,
+          "hit_rate": 0.4375
+        },
+        "elapsed_mean": 0.08812954533398927,
+        "elapsed_median": 0.08885889800149016,
+        "elapsed_min": 0.08088563400087878
+      },
+      "micro": {
+        "n_constraints": 26,
+        "uncached_rewrite_s": 1.0842300252988934e-05,
+        "cached_rewrite_s": 8.40419961605221e-06,
+        "rewrite_speedup": 1.290105036567658,
+        "raw_depth": 188,
+        "simplified_depth": 188,
+        "depth_reduction": 0.0,
+        "raw_nodes": 301,
+        "simplified_nodes": 301,
+        "node_reduction": 0.0,
+        "cse_depth": 68,
+        "cse_nodes": 105,
+        "cse_depth_reduction": 0.6382978723404256,
+        "cse_node_reduction": 0.6511627906976745,
+        "raw_query_s": 0.0007235736004076899,
+        "cse_query_s": 0.0006145507999463007,
+        "query_speedup": 1.1774024221771668,
+        "cache": {
+          "size": 13,
+          "maxsize": 4096,
+          "hits": 273,
+          "misses": 13,
+          "hit_rate": 0.9545454545454546
+        }
+      }
+    },
+    {
+      "sample": "sample_11_mixed",
+      "baseline": {
+        "deadended": 4,
+        "constraints": 8,
+        "constraint_depth": 62,
+        "constraint_nodes": 108,
+        "elapsed_mean": 0.05566358733631205,
+        "elapsed_median": 0.05586950799624901,
+        "elapsed_min": 0.053701195007306524
+      },
+      "strategy": {
+        "deadended": 4,
+        "constraints": 8,
+        "constraint_depth": 62,
+        "constraint_nodes": 108,
+        "elapsed_mean": 0.056137380001018755,
+        "elapsed_median": 0.05653468500531744,
+        "elapsed_min": 0.055068326997570693
+      },
+      "cached": {
+        "deadended": 4,
+        "constraints": 8,
+        "constraint_depth": 62,
+        "constraint_nodes": 108,
+        "cache": {
+          "size": 8,
+          "maxsize": 4096,
+          "hits": 10,
+          "misses": 8,
+          "hit_rate": 0.5555555555555556
+        },
+        "elapsed_mean": 0.05577304899634328,
+        "elapsed_median": 0.05572348600253463,
+        "elapsed_min": 0.054011871994589455
+      },
+      "micro": {
+        "n_constraints": 8,
+        "uncached_rewrite_s": 5.076100933365524e-06,
+        "cached_rewrite_s": 4.504100070334971e-06,
+        "rewrite_speedup": 1.1269955938141518,
+        "raw_depth": 62,
+        "simplified_depth": 62,
+        "depth_reduction": 0.0,
+        "raw_nodes": 108,
+        "simplified_nodes": 108,
+        "node_reduction": 0.0,
+        "cse_depth": 39,
+        "cse_nodes": 64,
+        "cse_depth_reduction": 0.3709677419354839,
+        "cse_node_reduction": 0.40740740740740744,
+        "raw_query_s": 0.000987743600853719,
+        "cse_query_s": 0.0007924073986941948,
+        "query_speedup": 1.2465098161392965,
+        "cache": {
+          "size": 6,
+          "maxsize": 4096,
+          "hits": 82,
+          "misses": 6,
+          "hit_rate": 0.9318181818181818
+        }
+      }
+    },
+    {
+      "sample": "sample_12_branch",
+      "baseline": {
+        "deadended": 10,
+        "constraints": 50,
+        "constraint_depth": 417,
+        "constraint_nodes": 749,
+        "elapsed_mean": 0.12079256866612316,
+        "elapsed_median": 0.11733665900828782,
+        "elapsed_min": 0.11592159599240404
+      },
+      "strategy": {
+        "deadended": 10,
+        "constraints": 50,
+        "constraint_depth": 417,
+        "constraint_nodes": 749,
+        "elapsed_mean": 0.1185666526677475,
+        "elapsed_median": 0.1164321919932263,
+        "elapsed_min": 0.11631490000581834
+      },
+      "cached": {
+        "deadended": 10,
+        "constraints": 50,
+        "constraint_depth": 417,
+        "constraint_nodes": 749,
+        "cache": {
+          "size": 30,
+          "maxsize": 4096,
+          "hits": 22,
+          "misses": 30,
+          "hit_rate": 0.4230769230769231
+        },
+        "elapsed_mean": 0.12459966032959831,
+        "elapsed_median": 0.12265171900799032,
+        "elapsed_min": 0.11440559299080633
+      },
+      "micro": {
+        "n_constraints": 50,
+        "uncached_rewrite_s": 1.898849877761677e-05,
+        "cached_rewrite_s": 1.314630062552169e-05,
+        "rewrite_speedup": 1.4443986425164563,
+        "raw_depth": 417,
+        "simplified_depth": 417,
+        "depth_reduction": 0.0,
+        "raw_nodes": 749,
+        "simplified_nodes": 749,
+        "node_reduction": 0.0,
+        "cse_depth": 275,
+        "cse_nodes": 470,
+        "cse_depth_reduction": 0.3405275779376499,
+        "cse_node_reduction": 0.3724966622162884,
+        "raw_query_s": 0.0010302649985533207,
+        "cse_query_s": 0.0008583468006690964,
+        "query_speedup": 1.2002899035101091,
+        "cache": {
+          "size": 23,
+          "maxsize": 4096,
+          "hits": 527,
+          "misses": 23,
+          "hit_rate": 0.9581818181818181
+        }
+      }
+    },
+    {
+      "sample": "sample_13_loop",
+      "baseline": {
+        "deadended": 3,
+        "constraints": 6,
+        "constraint_depth": 45,
+        "constraint_nodes": 78,
+        "elapsed_mean": 0.062066931330870524,
+        "elapsed_median": 0.062052815992501564,
+        "elapsed_min": 0.06075259699719027
+      },
+      "strategy": {
+        "deadended": 3,
+        "constraints": 6,
+        "constraint_depth": 45,
+        "constraint_nodes": 78,
+        "elapsed_mean": 0.06340346366050653,
+        "elapsed_median": 0.06398607899609488,
+        "elapsed_min": 0.06202334699628409
+      },
+      "cached": {
+        "deadended": 3,
+        "constraints": 6,
+        "constraint_depth": 45,
+        "constraint_nodes": 78,
+        "cache": {
+          "size": 6,
+          "maxsize": 4096,
+          "hits": 22,
+          "misses": 6,
+          "hit_rate": 0.7857142857142857
+        },
+        "elapsed_mean": 0.06016549199800162,
+        "elapsed_median": 0.06030065400409512,
+        "elapsed_min": 0.05989074899116531
+      },
+      "micro": {
+        "n_constraints": 6,
+        "uncached_rewrite_s": 4.406100197229535e-06,
+        "cached_rewrite_s": 3.7681005778722464e-06,
+        "rewrite_speedup": 1.1693159739694503,
+        "raw_depth": 45,
+        "simplified_depth": 45,
+        "depth_reduction": 0.0,
+        "raw_nodes": 78,
+        "simplified_nodes": 78,
+        "node_reduction": 0.0,
+        "cse_depth": 35,
+        "cse_nodes": 59,
+        "cse_depth_reduction": 0.2222222222222222,
+        "cse_node_reduction": 0.2435897435897436,
+        "raw_query_s": 0.0008368563983822241,
+        "cse_query_s": 0.0008353622019058093,
+        "query_speedup": 1.001788680973362,
+        "cache": {
+          "size": 4,
+          "maxsize": 4096,
+          "hits": 62,
+          "misses": 4,
+          "hit_rate": 0.9393939393939394
+        }
+      }
+    },
+    {
+      "sample": "sample_14_switch",
+      "baseline": {
+        "deadended": 5,
+        "constraints": 17,
+        "constraint_depth": 127,
+        "constraint_nodes": 207,
+        "elapsed_mean": 0.06844046066786784,
+        "elapsed_median": 0.06847240000206511,
+        "elapsed_min": 0.06693425400590058
+      },
+      "strategy": {
+        "deadended": 5,
+        "constraints": 17,
+        "constraint_depth": 127,
+        "constraint_nodes": 207,
+        "elapsed_mean": 0.07305553133483045,
+        "elapsed_median": 0.06838182199862786,
+        "elapsed_min": 0.06740875799732748
+      },
+      "cached": {
+        "deadended": 5,
+        "constraints": 17,
+        "constraint_depth": 127,
+        "constraint_nodes": 207,
+        "cache": {
+          "size": 14,
+          "maxsize": 4096,
+          "hits": 12,
+          "misses": 14,
+          "hit_rate": 0.46153846153846156
+        },
+        "elapsed_mean": 0.0702093656679305,
+        "elapsed_median": 0.07033957999374252,
+        "elapsed_min": 0.06966955700772814
+      },
+      "micro": {
+        "n_constraints": 17,
+        "uncached_rewrite_s": 8.400199294555933e-06,
+        "cached_rewrite_s": 7.849099347367883e-06,
+        "rewrite_speedup": 1.0702118705342742,
+        "raw_depth": 127,
+        "simplified_depth": 127,
+        "depth_reduction": 0.0,
+        "raw_nodes": 207,
+        "simplified_nodes": 207,
+        "node_reduction": 0.0,
+        "cse_depth": 50,
+        "cse_nodes": 78,
+        "cse_depth_reduction": 0.6062992125984252,
+        "cse_node_reduction": 0.6231884057971014,
+        "raw_query_s": 0.0006665921973763034,
+        "cse_query_s": 0.0006828732002759352,
+        "query_speedup": 0.9761580877781512,
+        "cache": {
+          "size": 10,
+          "maxsize": 4096,
+          "hits": 177,
+          "misses": 10,
+          "hit_rate": 0.946524064171123
+        }
+      }
+    },
+    {
+      "sample": "sample_15_mixed",
+      "baseline": {
+        "deadended": 13,
+        "constraints": 91,
+        "constraint_depth": 689,
+        "constraint_nodes": 1196,
+        "elapsed_mean": 0.254573107008279,
+        "elapsed_median": 0.25260398400132544,
+        "elapsed_min": 0.24169246401288547
+      },
+      "strategy": {
+        "deadended": 13,
+        "constraints": 91,
+        "constraint_depth": 689,
+        "constraint_nodes": 1196,
+        "elapsed_mean": 0.2546362606663024,
+        "elapsed_median": 0.2505559449928114,
+        "elapsed_min": 0.24982926801021677
+      },
+      "cached": {
+        "deadended": 13,
+        "constraints": 91,
+        "constraint_depth": 689,
+        "constraint_nodes": 1196,
+        "cache": {
+          "size": 18,
+          "maxsize": 4096,
+          "hits": 184,
+          "misses": 18,
+          "hit_rate": 0.9108910891089109
+        },
+        "elapsed_mean": 0.25895860700014356,
+        "elapsed_median": 0.25531688499904703,
+        "elapsed_min": 0.2521813750063302
+      },
+      "micro": {
+        "n_constraints": 91,
+        "uncached_rewrite_s": 3.3121799060609194e-05,
+        "cached_rewrite_s": 3.556489973561838e-05,
+        "rewrite_speedup": 0.9313058466867429,
+        "raw_depth": 689,
+        "simplified_depth": 689,
+        "depth_reduction": 0.0,
+        "raw_nodes": 1196,
+        "simplified_nodes": 1196,
+        "node_reduction": 0.0,
+        "cse_depth": 356,
+        "cse_nodes": 584,
+        "cse_depth_reduction": 0.48330914368650213,
+        "cse_node_reduction": 0.5117056856187291,
+        "raw_query_s": 0.0008862023998517544,
+        "cse_query_s": 0.0007385460019577294,
+        "query_speedup": 1.199928504795394,
+        "cache": {
+          "size": 15,
+          "maxsize": 4096,
+          "hits": 986,
+          "misses": 15,
+          "hit_rate": 0.985014985014985
+        }
+      }
+    },
+    {
+      "sample": "sample_16_branch",
+      "baseline": {
+        "deadended": 7,
+        "constraints": 28,
+        "constraint_depth": 201,
+        "constraint_nodes": 351,
+        "elapsed_mean": 0.09262385166463598,
+        "elapsed_median": 0.09273740299977362,
+        "elapsed_min": 0.09220971999457106
+      },
+      "strategy": {
+        "deadended": 7,
+        "constraints": 28,
+        "constraint_depth": 201,
+        "constraint_nodes": 351,
+        "elapsed_mean": 0.09094160165598926,
+        "elapsed_median": 0.09106168198923115,
+        "elapsed_min": 0.09065428999019787
+      },
+      "cached": {
+        "deadended": 7,
+        "constraints": 28,
+        "constraint_depth": 201,
+        "constraint_nodes": 351,
+        "cache": {
+          "size": 24,
+          "maxsize": 4096,
+          "hits": 16,
+          "misses": 24,
+          "hit_rate": 0.4
+        },
+        "elapsed_mean": 0.09221252366357173,
+        "elapsed_median": 0.09267126099439338,
+        "elapsed_min": 0.09086846299760509
+      },
+      "micro": {
+        "n_constraints": 28,
+        "uncached_rewrite_s": 1.8266501137986778e-05,
+        "cached_rewrite_s": 9.083200711756945e-06,
+        "rewrite_speedup": 2.011020312954587,
+        "raw_depth": 201,
+        "simplified_depth": 201,
+        "depth_reduction": 0.0,
+        "raw_nodes": 351,
+        "simplified_nodes": 351,
+        "node_reduction": 0.0,
+        "cse_depth": 101,
+        "cse_nodes": 164,
+        "cse_depth_reduction": 0.49751243781094523,
+        "cse_node_reduction": 0.5327635327635327,
+        "raw_query_s": 0.0008966260007582605,
+        "cse_query_s": 0.000770008799736388,
+        "query_speedup": 1.1644360441922479,
+        "cache": {
+          "size": 17,
+          "maxsize": 4096,
+          "hits": 291,
+          "misses": 17,
+          "hit_rate": 0.9448051948051948
+        }
+      }
+    },
+    {
+      "sample": "sample_17_loop",
+      "baseline": {
+        "deadended": 4,
+        "constraints": 12,
+        "constraint_depth": 92,
+        "constraint_nodes": 160,
+        "elapsed_mean": 0.07269866899878252,
+        "elapsed_median": 0.07195094799681101,
+        "elapsed_min": 0.07185934399603866
+      },
+      "strategy": {
+        "deadended": 4,
+        "constraints": 12,
+        "constraint_depth": 92,
+        "constraint_nodes": 160,
+        "elapsed_mean": 0.07074614200003755,
+        "elapsed_median": 0.07050406299822498,
+        "elapsed_min": 0.07034923900209833
+      },
+      "cached": {
+        "deadended": 4,
+        "constraints": 12,
+        "constraint_depth": 92,
+        "constraint_nodes": 160,
+        "cache": {
+          "size": 8,
+          "maxsize": 4096,
+          "hits": 36,
+          "misses": 8,
+          "hit_rate": 0.8181818181818182
+        },
+        "elapsed_mean": 0.07242493800004013,
+        "elapsed_median": 0.0730383149930276,
+        "elapsed_min": 0.07113243300409522
+      },
+      "micro": {
+        "n_constraints": 12,
+        "uncached_rewrite_s": 6.420099816750735e-06,
+        "cached_rewrite_s": 5.460200191009789e-06,
+        "rewrite_speedup": 1.1757993465736694,
+        "raw_depth": 92,
+        "simplified_depth": 92,
+        "depth_reduction": 0.0,
+        "raw_nodes": 160,
+        "simplified_nodes": 160,
+        "node_reduction": 0.0,
+        "cse_depth": 60,
+        "cse_nodes": 100,
+        "cse_depth_reduction": 0.34782608695652173,
+        "cse_node_reduction": 0.375,
+        "raw_query_s": 0.0007080371986376121,
+        "cse_query_s": 0.0006329794006887824,
+        "query_speedup": 1.1185785791246206,
+        "cache": {
+          "size": 6,
+          "maxsize": 4096,
+          "hits": 126,
+          "misses": 6,
+          "hit_rate": 0.9545454545454546
+        }
+      }
+    },
+    {
+      "sample": "sample_18_switch",
+      "baseline": {
+        "deadended": 4,
+        "constraints": 10,
+        "constraint_depth": 70,
+        "constraint_nodes": 110,
+        "elapsed_mean": 0.05842106632674889,
+        "elapsed_median": 0.057568428994272836,
+        "elapsed_min": 0.0572133209934691
+      },
+      "strategy": {
+        "deadended": 4,
+        "constraints": 10,
+        "constraint_depth": 70,
+        "constraint_nodes": 110,
+        "elapsed_mean": 0.05772590633811584,
+        "elapsed_median": 0.05751506499655079,
+        "elapsed_min": 0.05669267701159697
+      },
+      "cached": {
+        "deadended": 4,
+        "constraints": 10,
+        "constraint_depth": 70,
+        "constraint_nodes": 110,
+        "cache": {
+          "size": 10,
+          "maxsize": 4096,
+          "hits": 10,
+          "misses": 10,
+          "hit_rate": 0.5
+        },
+        "elapsed_mean": 0.05791005666348307,
+        "elapsed_median": 0.058037290000356734,
+        "elapsed_min": 0.05756826799188275
+      },
+      "micro": {
+        "n_constraints": 10,
+        "uncached_rewrite_s": 5.6930992286652325e-06,
+        "cached_rewrite_s": 4.720101424027235e-06,
+        "rewrite_speedup": 1.2061391731298492,
+        "raw_depth": 70,
+        "simplified_depth": 70,
+        "depth_reduction": 0.0,
+        "raw_nodes": 110,
+        "simplified_nodes": 110,
+        "node_reduction": 0.0,
+        "cse_depth": 27,
+        "cse_nodes": 41,
+        "cse_depth_reduction": 0.6142857142857143,
+        "cse_node_reduction": 0.6272727272727272,
+        "raw_query_s": 0.0006774844019673765,
+        "cse_query_s": 0.0005710497993277386,
+        "query_speedup": 1.1863840995390187,
+        "cache": {
+          "size": 7,
+          "maxsize": 4096,
+          "hits": 103,
+          "misses": 7,
+          "hit_rate": 0.9363636363636364
+        }
+      }
+    },
+    {
+      "sample": "sample_19_mixed",
+      "baseline": {
+        "deadended": 6,
+        "constraints": 30,
+        "constraint_depth": 210,
+        "constraint_nodes": 360,
+        "elapsed_mean": 0.13933197100413963,
+        "elapsed_median": 0.13917997099633794,
+        "elapsed_min": 0.13366462600242812
+      },
+      "strategy": {
+        "deadended": 6,
+        "constraints": 30,
+        "constraint_depth": 210,
+        "constraint_nodes": 360,
+        "elapsed_mean": 0.13861648700064202,
+        "elapsed_median": 0.1385029119992396,
+        "elapsed_min": 0.1349525289988378
+      },
+      "cached": {
+        "deadended": 6,
+        "constraints": 30,
+        "constraint_depth": 210,
+        "constraint_nodes": 360,
+        "cache": {
+          "size": 14,
+          "maxsize": 4096,
+          "hits": 84,
+          "misses": 14,
+          "hit_rate": 0.8571428571428571
+        },
+        "elapsed_mean": 0.14112340333425286,
+        "elapsed_median": 0.140799799002707,
+        "elapsed_min": 0.13999026900273748
+      },
+      "micro": {
+        "n_constraints": 30,
+        "uncached_rewrite_s": 1.1922299745492636e-05,
+        "cached_rewrite_s": 9.324299753643572e-06,
+        "rewrite_speedup": 1.2786268202964912,
+        "raw_depth": 210,
+        "simplified_depth": 210,
+        "depth_reduction": 0.0,
+        "raw_nodes": 360,
+        "simplified_nodes": 360,
+        "node_reduction": 0.0,
+        "cse_depth": 74,
+        "cse_nodes": 114,
+        "cse_depth_reduction": 0.6476190476190475,
+        "cse_node_reduction": 0.6833333333333333,
+        "raw_query_s": 0.0009107621997827664,
+        "cse_query_s": 0.0006682862003799528,
+        "query_speedup": 1.3628325697357724,
+        "cache": {
+          "size": 10,
+          "maxsize": 4096,
+          "hits": 320,
+          "misses": 10,
+          "hit_rate": 0.9696969696969697
+        }
+      }
+    },
+    {
+      "sample": "sample_20_branch",
+      "baseline": {
+        "deadended": 9,
+        "constraints": 44,
+        "constraint_depth": 333,
+        "constraint_nodes": 566,
+        "elapsed_mean": 0.1280149919912219,
+        "elapsed_median": 0.1282509969896637,
+        "elapsed_min": 0.12707366098766215
+      },
+      "strategy": {
+        "deadended": 9,
+        "constraints": 44,
+        "constraint_depth": 333,
+        "constraint_nodes": 566,
+        "elapsed_mean": 0.12534037332807202,
+        "elapsed_median": 0.12493459098914173,
+        "elapsed_min": 0.12382551700284239
+      },
+      "cached": {
+        "deadended": 9,
+        "constraints": 44,
+        "constraint_depth": 333,
+        "constraint_nodes": 566,
+        "cache": {
+          "size": 40,
+          "maxsize": 4096,
+          "hits": 20,
+          "misses": 40,
+          "hit_rate": 0.3333333333333333
+        },
+        "elapsed_mean": 0.12783577399871623,
+        "elapsed_median": 0.12883065298956353,
+        "elapsed_min": 0.12379768000391778
+      },
+      "micro": {
+        "n_constraints": 44,
+        "uncached_rewrite_s": 1.853540015872568e-05,
+        "cached_rewrite_s": 1.28033003420569e-05,
+        "rewrite_speedup": 1.4477048623033313,
+        "raw_depth": 333,
+        "simplified_depth": 333,
+        "depth_reduction": 0.0,
+        "raw_nodes": 566,
+        "simplified_nodes": 566,
+        "node_reduction": 0.0,
+        "cse_depth": 198,
+        "cse_nodes": 323,
+        "cse_depth_reduction": 0.4054054054054054,
+        "cse_node_reduction": 0.42932862190812726,
+        "raw_query_s": 0.0009249104012269526,
+        "cse_query_s": 0.0008728791988687589,
+        "query_speedup": 1.0596087092298974,
+        "cache": {
+          "size": 27,
+          "maxsize": 4096,
+          "hits": 457,
+          "misses": 27,
+          "hit_rate": 0.9442148760330579
+        }
+      }
+    },
+    {
+      "sample": "sample_21_loop",
+      "baseline": {
+        "deadended": 5,
+        "constraints": 20,
+        "constraint_depth": 155,
+        "constraint_nodes": 270,
+        "elapsed_mean": 0.1154215439989154,
+        "elapsed_median": 0.1156669839983806,
+        "elapsed_min": 0.11331755400169641
+      },
+      "strategy": {
+        "deadended": 5,
+        "constraints": 20,
+        "constraint_depth": 155,
+        "constraint_nodes": 270,
+        "elapsed_mean": 0.1151722716652633,
+        "elapsed_median": 0.11167394799122121,
+        "elapsed_min": 0.11114731000270694
+      },
+      "cached": {
+        "deadended": 5,
+        "constraints": 20,
+        "constraint_depth": 155,
+        "constraint_nodes": 270,
+        "cache": {
+          "size": 10,
+          "maxsize": 4096,
+          "hits": 54,
+          "misses": 10,
+          "hit_rate": 0.84375
+        },
+        "elapsed_mean": 0.10945239866365834,
+        "elapsed_median": 0.10820285699446686,
+        "elapsed_min": 0.10820273800345603
+      },
+      "micro": {
+        "n_constraints": 20,
+        "uncached_rewrite_s": 8.64120083861053e-06,
+        "cached_rewrite_s": 5.837199569214135e-06,
+        "rewrite_speedup": 1.4803675523079467,
+        "raw_depth": 155,
+        "simplified_depth": 155,
+        "depth_reduction": 0.0,
+        "raw_nodes": 270,
+        "simplified_nodes": 270,
+        "node_reduction": 0.0,
+        "cse_depth": 89,
+        "cse_nodes": 147,
+        "cse_depth_reduction": 0.4258064516129032,
+        "cse_node_reduction": 0.4555555555555556,
+        "raw_query_s": 0.0009108002006541938,
+        "cse_query_s": 0.0007913431996712461,
+        "query_speedup": 1.1509547324505658,
+        "cache": {
+          "size": 8,
+          "maxsize": 4096,
+          "hits": 212,
+          "misses": 8,
+          "hit_rate": 0.9636363636363636
+        }
+      }
+    },
+    {
+      "sample": "sample_22_switch",
+      "baseline": {
+        "deadended": 6,
+        "constraints": 26,
+        "constraint_depth": 188,
+        "constraint_nodes": 301,
+        "elapsed_mean": 0.084076658662525,
+        "elapsed_median": 0.08347928199509624,
+        "elapsed_min": 0.08251159999053925
+      },
+      "strategy": {
+        "deadended": 6,
+        "constraints": 26,
+        "constraint_depth": 188,
+        "constraint_nodes": 301,
+        "elapsed_mean": 0.08138314400760767,
+        "elapsed_median": 0.08262921401183121,
+        "elapsed_min": 0.0783161330036819
+      },
+      "cached": {
+        "deadended": 6,
+        "constraints": 26,
+        "constraint_depth": 188,
+        "constraint_nodes": 301,
+        "cache": {
+          "size": 18,
+          "maxsize": 4096,
+          "hits": 14,
+          "misses": 18,
+          "hit_rate": 0.4375
+        },
+        "elapsed_mean": 0.08317315033734,
+        "elapsed_median": 0.08265187800861895,
+        "elapsed_min": 0.08042604400543496
+      },
+      "micro": {
+        "n_constraints": 26,
+        "uncached_rewrite_s": 1.2602299102582038e-05,
+        "cached_rewrite_s": 8.537199755664915e-06,
+        "rewrite_speedup": 1.4761630819543257,
+        "raw_depth": 188,
+        "simplified_depth": 188,
+        "depth_reduction": 0.0,
+        "raw_nodes": 301,
+        "simplified_nodes": 301,
+        "node_reduction": 0.0,
+        "cse_depth": 68,
+        "cse_nodes": 105,
+        "cse_depth_reduction": 0.6382978723404256,
+        "cse_node_reduction": 0.6511627906976745,
+        "raw_query_s": 0.0007107111974619329,
+        "cse_query_s": 0.0006907128001330421,
+        "query_speedup": 1.0289532745376064,
+        "cache": {
+          "size": 13,
+          "maxsize": 4096,
+          "hits": 273,
+          "misses": 13,
+          "hit_rate": 0.9545454545454546
+        }
+      }
+    },
+    {
+      "sample": "sample_23_mixed",
+      "baseline": {
+        "deadended": 65,
+        "constraints": 676,
+        "constraint_depth": 5101,
+        "constraint_nodes": 8681,
+        "elapsed_mean": 0.9935615653327355,
+        "elapsed_median": 1.0155779219930992,
+        "elapsed_min": 0.9197736689966405
+      },
+      "strategy": {
+        "deadended": 65,
+        "constraints": 676,
+        "constraint_depth": 5101,
+        "constraint_nodes": 8681,
+        "elapsed_mean": 0.9128540763340425,
+        "elapsed_median": 0.9199447779974435,
+        "elapsed_min": 0.8936754159949487
+      },
+      "cached": {
+        "deadended": 65,
+        "constraints": 676,
+        "constraint_depth": 5101,
+        "constraint_nodes": 8681,
+        "cache": {
+          "size": 30,
+          "maxsize": 4096,
+          "hits": 432,
+          "misses": 30,
+          "hit_rate": 0.935064935064935
+        },
+        "elapsed_mean": 0.8857563636702253,
+        "elapsed_median": 0.8846435460000066,
+        "elapsed_min": 0.8816298540041316
+      },
+      "micro": {
+        "n_constraints": 676,
+        "uncached_rewrite_s": 0.00022156339982757345,
+        "cached_rewrite_s": 0.00014011639868840575,
+        "rewrite_speedup": 1.5812810056608115,
+        "raw_depth": 5101,
+        "simplified_depth": 5101,
+        "depth_reduction": 0.0,
+        "raw_nodes": 8681,
+        "simplified_nodes": 8681,
+        "node_reduction": 0.0,
+        "cse_depth": 2358,
+        "cse_nodes": 3835,
+        "cse_depth_reduction": 0.537737698490492,
+        "cse_node_reduction": 0.558230618592328,
+        "raw_query_s": 0.0013577650010120124,
+        "cse_query_s": 0.0011950549989705906,
+        "query_speedup": 1.1361527311977933,
+        "cache": {
+          "size": 25,
+          "maxsize": 4096,
+          "hits": 7411,
+          "misses": 25,
+          "hit_rate": 0.9966379774072082
+        }
+      }
+    },
+    {
+      "sample": "sample_24_branch",
+      "baseline": {
+        "deadended": 7,
+        "constraints": 21,
+        "constraint_depth": 160,
+        "constraint_nodes": 278,
+        "elapsed_mean": 0.07901789567161661,
+        "elapsed_median": 0.07960911300324369,
+        "elapsed_min": 0.07674082901212387
+      },
+      "strategy": {
+        "deadended": 7,
+        "constraints": 21,
+        "constraint_depth": 160,
+        "constraint_nodes": 278,
+        "elapsed_mean": 0.07868054766731802,
+        "elapsed_median": 0.0791836529970169,
+        "elapsed_min": 0.07747365201066714
+      },
+      "cached": {
+        "deadended": 7,
+        "constraints": 21,
+        "constraint_depth": 160,
+        "constraint_nodes": 278,
+        "cache": {
+          "size": 16,
+          "maxsize": 4096,
+          "hits": 16,
+          "misses": 16,
+          "hit_rate": 0.5
+        },
+        "elapsed_mean": 0.07852400200014624,
+        "elapsed_median": 0.07765841399668716,
+        "elapsed_min": 0.07715475000441074
+      },
+      "micro": {
+        "n_constraints": 21,
+        "uncached_rewrite_s": 1.0084301175083965e-05,
+        "cached_rewrite_s": 7.3632007115520535e-06,
+        "rewrite_speedup": 1.369554025501818,
+        "raw_depth": 160,
+        "simplified_depth": 160,
+        "depth_reduction": 0.0,
+        "raw_nodes": 278,
+        "simplified_nodes": 278,
+        "node_reduction": 0.0,
+        "cse_depth": 112,
+        "cse_nodes": 188,
+        "cse_depth_reduction": 0.30000000000000004,
+        "cse_node_reduction": 0.3237410071942446,
+        "raw_query_s": 0.0008213157998397946,
+        "cse_query_s": 0.0007417760003590957,
+        "query_speedup": 1.1072288661835832,
+        "cache": {
+          "size": 13,
+          "maxsize": 4096,
+          "hits": 218,
+          "misses": 13,
+          "hit_rate": 0.9437229437229437
+        }
+      }
+    },
+    {
+      "sample": "sample_25_loop",
+      "baseline": {
+        "deadended": 3,
+        "constraints": 6,
+        "constraint_depth": 45,
+        "constraint_nodes": 78,
+        "elapsed_mean": 0.06207858866158252,
+        "elapsed_median": 0.0589726129983319,
+        "elapsed_min": 0.0565688649949152
+      },
+      "strategy": {
+        "deadended": 3,
+        "constraints": 6,
+        "constraint_depth": 45,
+        "constraint_nodes": 78,
+        "elapsed_mean": 0.0657712490016517,
+        "elapsed_median": 0.06332122700405307,
+        "elapsed_min": 0.06048328000179026
+      },
+      "cached": {
+        "deadended": 3,
+        "constraints": 6,
+        "constraint_depth": 45,
+        "constraint_nodes": 78,
+        "cache": {
+          "size": 6,
+          "maxsize": 4096,
+          "hits": 22,
+          "misses": 6,
+          "hit_rate": 0.7857142857142857
+        },
+        "elapsed_mean": 0.06113977333491979,
+        "elapsed_median": 0.06244425800105091,
+        "elapsed_min": 0.057248074997914955
+      },
+      "micro": {
+        "n_constraints": 6,
+        "uncached_rewrite_s": 4.602200351655483e-06,
+        "cached_rewrite_s": 3.933098923880607e-06,
+        "rewrite_speedup": 1.170120670932605,
+        "raw_depth": 45,
+        "simplified_depth": 45,
+        "depth_reduction": 0.0,
+        "raw_nodes": 78,
+        "simplified_nodes": 78,
+        "node_reduction": 0.0,
+        "cse_depth": 35,
+        "cse_nodes": 59,
+        "cse_depth_reduction": 0.2222222222222222,
+        "cse_node_reduction": 0.2435897435897436,
+        "raw_query_s": 0.001112806997844018,
+        "cse_query_s": 0.0008351563999895006,
+        "query_speedup": 1.332453415741061,
+        "cache": {
+          "size": 4,
+          "maxsize": 4096,
+          "hits": 62,
+          "misses": 4,
+          "hit_rate": 0.9393939393939394
+        }
+      }
+    },
+    {
+      "sample": "sample_26_switch",
+      "baseline": {
+        "deadended": 4,
+        "constraints": 10,
+        "constraint_depth": 70,
+        "constraint_nodes": 110,
+        "elapsed_mean": 0.0597961583310583,
+        "elapsed_median": 0.06009868800174445,
+        "elapsed_min": 0.05904599399946164
+      },
+      "strategy": {
+        "deadended": 4,
+        "constraints": 10,
+        "constraint_depth": 70,
+        "constraint_nodes": 110,
+        "elapsed_mean": 0.05989867133515266,
+        "elapsed_median": 0.06033884600037709,
+        "elapsed_min": 0.05814057200041134
+      },
+      "cached": {
+        "deadended": 4,
+        "constraints": 10,
+        "constraint_depth": 70,
+        "constraint_nodes": 110,
+        "cache": {
+          "size": 10,
+          "maxsize": 4096,
+          "hits": 10,
+          "misses": 10,
+          "hit_rate": 0.5
+        },
+        "elapsed_mean": 0.06407119833359805,
+        "elapsed_median": 0.06625487699056976,
+        "elapsed_min": 0.05942579200200271
+      },
+      "micro": {
+        "n_constraints": 10,
+        "uncached_rewrite_s": 5.674100248143077e-06,
+        "cached_rewrite_s": 5.167200288269669e-06,
+        "rewrite_speedup": 1.09809953777564,
+        "raw_depth": 70,
+        "simplified_depth": 70,
+        "depth_reduction": 0.0,
+        "raw_nodes": 110,
+        "simplified_nodes": 110,
+        "node_reduction": 0.0,
+        "cse_depth": 27,
+        "cse_nodes": 41,
+        "cse_depth_reduction": 0.6142857142857143,
+        "cse_node_reduction": 0.6272727272727272,
+        "raw_query_s": 0.0007544841995695606,
+        "cse_query_s": 0.0005950263992417603,
+        "query_speedup": 1.2679844130125935,
+        "cache": {
+          "size": 7,
+          "maxsize": 4096,
+          "hits": 103,
+          "misses": 7,
+          "hit_rate": 0.9363636363636364
+        }
+      }
+    },
+    {
+      "sample": "sample_27_mixed",
+      "baseline": {
+        "deadended": 8,
+        "constraints": 36,
+        "constraint_depth": 276,
+        "constraint_nodes": 444,
+        "elapsed_mean": 0.09895161400102855,
+        "elapsed_median": 0.0979141330026323,
+        "elapsed_min": 0.09532331700029317
+      },
+      "strategy": {
+        "deadended": 8,
+        "constraints": 36,
+        "constraint_depth": 276,
+        "constraint_nodes": 444,
+        "elapsed_mean": 0.09671019866558102,
+        "elapsed_median": 0.09652165400621016,
+        "elapsed_min": 0.0935879729950102
+      },
+      "cached": {
+        "deadended": 8,
+        "constraints": 36,
+        "constraint_depth": 276,
+        "constraint_nodes": 444,
+        "cache": {
+          "size": 14,
+          "maxsize": 4096,
+          "hits": 26,
+          "misses": 14,
+          "hit_rate": 0.65
+        },
+        "elapsed_mean": 0.09448427033688252,
+        "elapsed_median": 0.09440658900712151,
+        "elapsed_min": 0.09435029199812561
+      },
+      "micro": {
+        "n_constraints": 36,
+        "uncached_rewrite_s": 1.4858398935757578e-05,
+        "cached_rewrite_s": 1.0422201012261211e-05,
+        "rewrite_speedup": 1.4256488546207655,
+        "raw_depth": 276,
+        "simplified_depth": 276,
+        "depth_reduction": 0.0,
+        "raw_nodes": 444,
+        "simplified_nodes": 444,
+        "node_reduction": 0.0,
+        "cse_depth": 96,
+        "cse_nodes": 147,
+        "cse_depth_reduction": 0.6521739130434783,
+        "cse_node_reduction": 0.6689189189189189,
+        "raw_query_s": 0.0007366757985437289,
+        "cse_query_s": 0.0007081852003466338,
+        "query_speedup": 1.0402304343315136,
+        "cache": {
+          "size": 10,
+          "maxsize": 4096,
+          "hits": 386,
+          "misses": 10,
+          "hit_rate": 0.9747474747474747
+        }
+      }
+    },
+    {
+      "sample": "sample_28_branch",
+      "baseline": {
+        "deadended": 5,
+        "constraints": 15,
+        "constraint_depth": 114,
+        "constraint_nodes": 194,
+        "elapsed_mean": 0.07062292333284859,
+        "elapsed_median": 0.07038784999167547,
+        "elapsed_min": 0.07033346900425386
+      },
+      "strategy": {
+        "deadended": 5,
+        "constraints": 15,
+        "constraint_depth": 114,
+        "constraint_nodes": 194,
+        "elapsed_mean": 0.07050520232587587,
+        "elapsed_median": 0.06986528699053451,
+        "elapsed_min": 0.06959141900006216
+      },
+      "cached": {
+        "deadended": 5,
+        "constraints": 15,
+        "constraint_depth": 114,
+        "constraint_nodes": 194,
+        "cache": {
+          "size": 16,
+          "maxsize": 4096,
+          "hits": 12,
+          "misses": 16,
+          "hit_rate": 0.42857142857142855
+        },
+        "elapsed_mean": 0.07174251566660435,
+        "elapsed_median": 0.07105712400516495,
+        "elapsed_min": 0.07069495700125117
+      },
+      "micro": {
+        "n_constraints": 15,
+        "uncached_rewrite_s": 9.428300836589188e-06,
+        "cached_rewrite_s": 7.021200144663453e-06,
+        "rewrite_speedup": 1.3428332254216226,
+        "raw_depth": 114,
+        "simplified_depth": 114,
+        "depth_reduction": 0.0,
+        "raw_nodes": 194,
+        "simplified_nodes": 194,
+        "node_reduction": 0.0,
+        "cse_depth": 104,
+        "cse_nodes": 176,
+        "cse_depth_reduction": 0.08771929824561409,
+        "cse_node_reduction": 0.09278350515463918,
+        "raw_query_s": 0.0007358038012171165,
+        "cse_query_s": 0.000718369398964569,
+        "query_speedup": 1.024269411082483,
+        "cache": {
+          "size": 11,
+          "maxsize": 4096,
+          "hits": 154,
+          "misses": 11,
+          "hit_rate": 0.9333333333333333
+        }
+      }
+    },
+    {
+      "sample": "sample_29_loop",
+      "baseline": {
+        "deadended": 3,
+        "constraints": 6,
+        "constraint_depth": 45,
+        "constraint_nodes": 78,
+        "elapsed_mean": 0.06325424766206804,
+        "elapsed_median": 0.06265367499145214,
+        "elapsed_min": 0.0599290359969018
+      },
+      "strategy": {
+        "deadended": 3,
+        "constraints": 6,
+        "constraint_depth": 45,
+        "constraint_nodes": 78,
+        "elapsed_mean": 0.061699771332011245,
+        "elapsed_median": 0.06214891900890507,
+        "elapsed_min": 0.06060654099564999
+      },
+      "cached": {
+        "deadended": 3,
+        "constraints": 6,
+        "constraint_depth": 45,
+        "constraint_nodes": 78,
+        "cache": {
+          "size": 6,
+          "maxsize": 4096,
+          "hits": 22,
+          "misses": 6,
+          "hit_rate": 0.7857142857142857
+        },
+        "elapsed_mean": 0.062336379332312696,
+        "elapsed_median": 0.060816293000243604,
+        "elapsed_min": 0.06039384899486322
+      },
+      "micro": {
+        "n_constraints": 6,
+        "uncached_rewrite_s": 1.8090399680659176e-05,
+        "cached_rewrite_s": 5.398099892772734e-06,
+        "rewrite_speedup": 3.351253226136029,
+        "raw_depth": 45,
+        "simplified_depth": 45,
+        "depth_reduction": 0.0,
+        "raw_nodes": 78,
+        "simplified_nodes": 78,
+        "node_reduction": 0.0,
+        "cse_depth": 35,
+        "cse_nodes": 59,
+        "cse_depth_reduction": 0.2222222222222222,
+        "cse_node_reduction": 0.2435897435897436,
+        "raw_query_s": 0.0008774554007686675,
+        "cse_query_s": 0.0007908091996796429,
+        "query_speedup": 1.10956650621177,
+        "cache": {
+          "size": 4,
+          "maxsize": 4096,
+          "hits": 62,
+          "misses": 4,
+          "hit_rate": 0.9393939393939394
+        }
+      }
+    },
+    {
+      "sample": "sample_30_switch",
+      "baseline": {
+        "deadended": 5,
+        "constraints": 17,
+        "constraint_depth": 127,
+        "constraint_nodes": 207,
+        "elapsed_mean": 0.07194785600101265,
+        "elapsed_median": 0.07176891301060095,
+        "elapsed_min": 0.07017244999588002
+      },
+      "strategy": {
+        "deadended": 5,
+        "constraints": 17,
+        "constraint_depth": 127,
+        "constraint_nodes": 207,
+        "elapsed_mean": 0.06994484900011837,
+        "elapsed_median": 0.06942491700465325,
+        "elapsed_min": 0.06935118399269413
+      },
+      "cached": {
+        "deadended": 5,
+        "constraints": 17,
+        "constraint_depth": 127,
+        "constraint_nodes": 207,
+        "cache": {
+          "size": 14,
+          "maxsize": 4096,
+          "hits": 12,
+          "misses": 14,
+          "hit_rate": 0.46153846153846156
+        },
+        "elapsed_mean": 0.07077304366005895,
+        "elapsed_median": 0.07072240699199028,
+        "elapsed_min": 0.07015680099721067
+      },
+      "micro": {
+        "n_constraints": 17,
+        "uncached_rewrite_s": 7.973199535626918e-06,
+        "cached_rewrite_s": 6.0192003729753195e-06,
+        "rewrite_speedup": 1.3246276982943712,
+        "raw_depth": 127,
+        "simplified_depth": 127,
+        "depth_reduction": 0.0,
+        "raw_nodes": 207,
+        "simplified_nodes": 207,
+        "node_reduction": 0.0,
+        "cse_depth": 50,
+        "cse_nodes": 78,
+        "cse_depth_reduction": 0.6062992125984252,
+        "cse_node_reduction": 0.6231884057971014,
+        "raw_query_s": 0.0006709201988996938,
+        "cse_query_s": 0.0006927087990334258,
+        "query_speedup": 0.9685458014043783,
+        "cache": {
+          "size": 10,
+          "maxsize": 4096,
+          "hits": 177,
+          "misses": 10,
+          "hit_rate": 0.946524064171123
+        }
+      }
+    },
+    {
+      "sample": "sample_31_mixed",
+      "baseline": {
+        "deadended": 5,
+        "constraints": 25,
+        "constraint_depth": 190,
+        "constraint_nodes": 330,
+        "elapsed_mean": 0.09729628000544228,
+        "elapsed_median": 0.09719615100766532,
+        "elapsed_min": 0.09560770700045396
+      },
+      "strategy": {
+        "deadended": 5,
+        "constraints": 25,
+        "constraint_depth": 190,
+        "constraint_nodes": 330,
+        "elapsed_mean": 0.0971439366597527,
+        "elapsed_median": 0.0970263749914011,
+        "elapsed_min": 0.09526310699584428
+      },
+      "cached": {
+        "deadended": 5,
+        "constraints": 25,
+        "constraint_depth": 190,
+        "constraint_nodes": 330,
+        "cache": {
+          "size": 12,
+          "maxsize": 4096,
+          "hits": 52,
+          "misses": 12,
+          "hit_rate": 0.8125
+        },
+        "elapsed_mean": 0.09779285932988084,
+        "elapsed_median": 0.09767331898910925,
+        "elapsed_min": 0.09438540000701323
+      },
+      "micro": {
+        "n_constraints": 25,
+        "uncached_rewrite_s": 1.041329960571602e-05,
+        "cached_rewrite_s": 8.011200407054275e-06,
+        "rewrite_speedup": 1.2998426049292904,
+        "raw_depth": 190,
+        "simplified_depth": 190,
+        "depth_reduction": 0.0,
+        "raw_nodes": 330,
+        "simplified_nodes": 330,
+        "node_reduction": 0.0,
+        "cse_depth": 124,
+        "cse_nodes": 207,
+        "cse_depth_reduction": 0.34736842105263155,
+        "cse_node_reduction": 0.3727272727272727,
+        "raw_query_s": 0.0010250166000332684,
+        "cse_query_s": 0.0006729204003931954,
+        "query_speedup": 1.5232360312368878,
+        "cache": {
+          "size": 9,
+          "maxsize": 4096,
+          "hits": 266,
+          "misses": 9,
+          "hit_rate": 0.9672727272727273
+        }
+      }
+    },
+    {
+      "sample": "sample_32_branch",
+      "baseline": {
+        "deadended": 16,
+        "constraints": 80,
+        "constraint_depth": 603,
+        "constraint_nodes": 1024,
+        "elapsed_mean": 0.16432561099645682,
+        "elapsed_median": 0.16396100498968735,
+        "elapsed_min": 0.16215039299277123
+      },
+      "strategy": {
+        "deadended": 16,
+        "constraints": 80,
+        "constraint_depth": 603,
+        "constraint_nodes": 1024,
+        "elapsed_mean": 0.16559699833548316,
+        "elapsed_median": 0.16543045699654613,
+        "elapsed_min": 0.16175713000120595
+      },
+      "cached": {
+        "deadended": 16,
+        "constraints": 80,
+        "constraint_depth": 603,
+        "constraint_nodes": 1024,
+        "cache": {
+          "size": 44,
+          "maxsize": 4096,
+          "hits": 34,
+          "misses": 44,
+          "hit_rate": 0.4358974358974359
+        },
+        "elapsed_mean": 0.16901677333711027,
+        "elapsed_median": 0.16822038000100292,
+        "elapsed_min": 0.16619798100146
+      },
+      "micro": {
+        "n_constraints": 80,
+        "uncached_rewrite_s": 2.8643700352404268e-05,
+        "cached_rewrite_s": 2.057750098174438e-05,
+        "rewrite_speedup": 1.3919912032960626,
+        "raw_depth": 603,
+        "simplified_depth": 603,
+        "depth_reduction": 0.0,
+        "raw_nodes": 1024,
+        "simplified_nodes": 1024,
+        "node_reduction": 0.0,
+        "cse_depth": 509,
+        "cse_nodes": 861,
+        "cse_depth_reduction": 0.15588723051409614,
+        "cse_node_reduction": 0.1591796875,
+        "raw_query_s": 0.0011315574025502428,
+        "cse_query_s": 0.0009597992000635713,
+        "query_speedup": 1.178952225085513,
+        "cache": {
+          "size": 36,
+          "maxsize": 4096,
+          "hits": 844,
+          "misses": 36,
+          "hit_rate": 0.9590909090909091
+        }
+      }
+    },
+    {
+      "sample": "sample_33_loop",
+      "baseline": {
+        "deadended": 5,
+        "constraints": 20,
+        "constraint_depth": 155,
+        "constraint_nodes": 270,
+        "elapsed_mean": 0.1079737106677688,
+        "elapsed_median": 0.107910920996801,
+        "elapsed_min": 0.10653763200389221
+      },
+      "strategy": {
+        "deadended": 5,
+        "constraints": 20,
+        "constraint_depth": 155,
+        "constraint_nodes": 270,
+        "elapsed_mean": 0.10797016633538685,
+        "elapsed_median": 0.10758922700188123,
+        "elapsed_min": 0.10697677200369071
+      },
+      "cached": {
+        "deadended": 5,
+        "constraints": 20,
+        "constraint_depth": 155,
+        "constraint_nodes": 270,
+        "cache": {
+          "size": 10,
+          "maxsize": 4096,
+          "hits": 54,
+          "misses": 10,
+          "hit_rate": 0.84375
+        },
+        "elapsed_mean": 0.11207327000253524,
+        "elapsed_median": 0.11324859500746243,
+        "elapsed_min": 0.10439577999932226
+      },
+      "micro": {
+        "n_constraints": 20,
+        "uncached_rewrite_s": 8.927199814934283e-06,
+        "cached_rewrite_s": 6.9330999394878745e-06,
+        "rewrite_speedup": 1.287620240996224,
+        "raw_depth": 155,
+        "simplified_depth": 155,
+        "depth_reduction": 0.0,
+        "raw_nodes": 270,
+        "simplified_nodes": 270,
+        "node_reduction": 0.0,
+        "cse_depth": 89,
+        "cse_nodes": 147,
+        "cse_depth_reduction": 0.4258064516129032,
+        "cse_node_reduction": 0.4555555555555556,
+        "raw_query_s": 0.00130934780172538,
+        "cse_query_s": 0.000915158199495636,
+        "query_speedup": 1.430733836452529,
+        "cache": {
+          "size": 8,
+          "maxsize": 4096,
+          "hits": 212,
+          "misses": 8,
+          "hit_rate": 0.9636363636363636
+        }
+      }
+    },
+    {
+      "sample": "sample_34_switch",
+      "baseline": {
+        "deadended": 6,
+        "constraints": 26,
+        "constraint_depth": 188,
+        "constraint_nodes": 301,
+        "elapsed_mean": 0.08357135800664157,
+        "elapsed_median": 0.0830292620084947,
+        "elapsed_min": 0.08289864400285296
+      },
+      "strategy": {
+        "deadended": 6,
+        "constraints": 26,
+        "constraint_depth": 188,
+        "constraint_nodes": 301,
+        "elapsed_mean": 0.08474498966825195,
+        "elapsed_median": 0.08472669799812138,
+        "elapsed_min": 0.08338520399411209
+      },
+      "cached": {
+        "deadended": 6,
+        "constraints": 26,
+        "constraint_depth": 188,
+        "constraint_nodes": 301,
+        "cache": {
+          "size": 18,
+          "maxsize": 4096,
+          "hits": 14,
+          "misses": 18,
+          "hit_rate": 0.4375
+        },
+        "elapsed_mean": 0.08568419100386866,
+        "elapsed_median": 0.0854585560009582,
+        "elapsed_min": 0.08517654000024777
+      },
+      "micro": {
+        "n_constraints": 26,
+        "uncached_rewrite_s": 1.0950199794024229e-05,
+        "cached_rewrite_s": 9.720200614538043e-06,
+        "rewrite_speedup": 1.1265405137468598,
+        "raw_depth": 188,
+        "simplified_depth": 188,
+        "depth_reduction": 0.0,
+        "raw_nodes": 301,
+        "simplified_nodes": 301,
+        "node_reduction": 0.0,
+        "cse_depth": 68,
+        "cse_nodes": 105,
+        "cse_depth_reduction": 0.6382978723404256,
+        "cse_node_reduction": 0.6511627906976745,
+        "raw_query_s": 0.0006944328022655099,
+        "cse_query_s": 0.000719741199281998,
+        "query_speedup": 0.9648368093396136,
+        "cache": {
+          "size": 13,
+          "maxsize": 4096,
+          "hits": 273,
+          "misses": 13,
+          "hit_rate": 0.9545454545454546
+        }
+      }
+    },
+    {
+      "sample": "sample_35_mixed",
+      "baseline": {
+        "deadended": 20,
+        "constraints": 108,
+        "constraint_depth": 818,
+        "constraint_nodes": 1348,
+        "elapsed_mean": 0.232478168332212,
+        "elapsed_median": 0.2326412879920099,
+        "elapsed_min": 0.231142994001857
+      },
+      "strategy": {
+        "deadended": 20,
+        "constraints": 108,
+        "constraint_depth": 818,
+        "constraint_nodes": 1348,
+        "elapsed_mean": 0.23569002032551603,
+        "elapsed_median": 0.2363813699921593,
+        "elapsed_min": 0.23219600899028592
+      },
+      "cached": {
+        "deadended": 20,
+        "constraints": 108,
+        "constraint_depth": 818,
+        "constraint_nodes": 1348,
+        "cache": {
+          "size": 20,
+          "maxsize": 4096,
+          "hits": 78,
+          "misses": 20,
+          "hit_rate": 0.7959183673469388
+        },
+        "elapsed_mean": 0.23400000899952525,
+        "elapsed_median": 0.2341049560054671,
+        "elapsed_min": 0.23196037199522834
+      },
+      "micro": {
+        "n_constraints": 108,
+        "uncached_rewrite_s": 4.086800036020577e-05,
+        "cached_rewrite_s": 2.7014699298888445e-05,
+        "rewrite_speedup": 1.5128060434079065,
+        "raw_depth": 818,
+        "simplified_depth": 818,
+        "depth_reduction": 0.0,
+        "raw_nodes": 1348,
+        "simplified_nodes": 1348,
+        "node_reduction": 0.0,
+        "cse_depth": 256,
+        "cse_nodes": 391,
+        "cse_depth_reduction": 0.687041564792176,
+        "cse_node_reduction": 0.7099406528189911,
+        "raw_query_s": 0.0008344103989657015,
+        "cse_query_s": 0.0007963414012920111,
+        "query_speedup": 1.0478048706395597,
+        "cache": {
+          "size": 16,
+          "maxsize": 4096,
+          "hits": 1172,
+          "misses": 16,
+          "hit_rate": 0.9865319865319865
+        }
+      }
+    },
+    {
+      "sample": "sample_36_branch",
+      "baseline": {
+        "deadended": 7,
+        "constraints": 21,
+        "constraint_depth": 147,
+        "constraint_nodes": 252,
+        "elapsed_mean": 0.079985161331327,
+        "elapsed_median": 0.07968060400162358,
+        "elapsed_min": 0.07883030299853999
+      },
+      "strategy": {
+        "deadended": 7,
+        "constraints": 21,
+        "constraint_depth": 147,
+        "constraint_nodes": 252,
+        "elapsed_mean": 0.07905237033264711,
+        "elapsed_median": 0.07772088699857704,
+        "elapsed_min": 0.07763351900212001
+      },
+      "cached": {
+        "deadended": 7,
+        "constraints": 21,
+        "constraint_depth": 147,
+        "constraint_nodes": 252,
+        "cache": {
+          "size": 16,
+          "maxsize": 4096,
+          "hits": 16,
+          "misses": 16,
+          "hit_rate": 0.5
+        },
+        "elapsed_mean": 0.07973299100315974,
+        "elapsed_median": 0.0793482160079293,
+        "elapsed_min": 0.07933703300659545
+      },
+      "micro": {
+        "n_constraints": 21,
+        "uncached_rewrite_s": 1.1993299995083363e-05,
+        "cached_rewrite_s": 7.172199548222124e-06,
+        "rewrite_speedup": 1.672192737311152,
+        "raw_depth": 147,
+        "simplified_depth": 147,
+        "depth_reduction": 0.0,
+        "raw_nodes": 252,
+        "simplified_nodes": 252,
+        "node_reduction": 0.0,
+        "cse_depth": 70,
+        "cse_nodes": 111,
+        "cse_depth_reduction": 0.5238095238095238,
+        "cse_node_reduction": 0.5595238095238095,
+        "raw_query_s": 0.0007664725999347866,
+        "cse_query_s": 0.0007059769995976239,
+        "query_speedup": 1.0856906108437563,
+        "cache": {
+          "size": 13,
+          "maxsize": 4096,
+          "hits": 218,
+          "misses": 13,
+          "hit_rate": 0.9437229437229437
+        }
+      }
+    },
+    {
+      "sample": "sample_37_loop",
+      "baseline": {
+        "deadended": 4,
+        "constraints": 12,
+        "constraint_depth": 92,
+        "constraint_nodes": 160,
+        "elapsed_mean": 0.07118827266579804,
+        "elapsed_median": 0.07079207300557755,
+        "elapsed_min": 0.06978423400141764
+      },
+      "strategy": {
+        "deadended": 4,
+        "constraints": 12,
+        "constraint_depth": 92,
+        "constraint_nodes": 160,
+        "elapsed_mean": 0.07046213166904636,
+        "elapsed_median": 0.07018881299882196,
+        "elapsed_min": 0.0700421850051498
+      },
+      "cached": {
+        "deadended": 4,
+        "constraints": 12,
+        "constraint_depth": 92,
+        "constraint_nodes": 160,
+        "cache": {
+          "size": 8,
+          "maxsize": 4096,
+          "hits": 36,
+          "misses": 8,
+          "hit_rate": 0.8181818181818182
+        },
+        "elapsed_mean": 0.07063605366662766,
+        "elapsed_median": 0.07050727200112306,
+        "elapsed_min": 0.07046679900668096
+      },
+      "micro": {
+        "n_constraints": 12,
+        "uncached_rewrite_s": 6.573200516868383e-06,
+        "cached_rewrite_s": 5.4181000450626016e-06,
+        "rewrite_speedup": 1.2131929019764778,
+        "raw_depth": 92,
+        "simplified_depth": 92,
+        "depth_reduction": 0.0,
+        "raw_nodes": 160,
+        "simplified_nodes": 160,
+        "node_reduction": 0.0,
+        "cse_depth": 60,
+        "cse_nodes": 100,
+        "cse_depth_reduction": 0.34782608695652173,
+        "cse_node_reduction": 0.375,
+        "raw_query_s": 0.0006662482017418369,
+        "cse_query_s": 0.0006286114017711953,
+        "query_speedup": 1.0598729196839176,
+        "cache": {
+          "size": 6,
+          "maxsize": 4096,
+          "hits": 126,
+          "misses": 6,
+          "hit_rate": 0.9545454545454546
+        }
+      }
+    },
+    {
+      "sample": "sample_38_switch",
+      "baseline": {
+        "deadended": 5,
+        "constraints": 17,
+        "constraint_depth": 127,
+        "constraint_nodes": 207,
+        "elapsed_mean": 0.06969030467250074,
+        "elapsed_median": 0.06938342400826514,
+        "elapsed_min": 0.0678408359963214
+      },
+      "strategy": {
+        "deadended": 5,
+        "constraints": 17,
+        "constraint_depth": 127,
+        "constraint_nodes": 207,
+        "elapsed_mean": 0.07019528700523854,
+        "elapsed_median": 0.07022364500153344,
+        "elapsed_min": 0.06743205600650981
+      },
+      "cached": {
+        "deadended": 5,
+        "constraints": 17,
+        "constraint_depth": 127,
+        "constraint_nodes": 207,
+        "cache": {
+          "size": 14,
+          "maxsize": 4096,
+          "hits": 12,
+          "misses": 14,
+          "hit_rate": 0.46153846153846156
+        },
+        "elapsed_mean": 0.07120497500000056,
+        "elapsed_median": 0.07064551500661764,
+        "elapsed_min": 0.07010702099069022
+      },
+      "micro": {
+        "n_constraints": 17,
+        "uncached_rewrite_s": 8.176200208254158e-06,
+        "cached_rewrite_s": 6.87120045768097e-06,
+        "rewrite_speedup": 1.1899231085762305,
+        "raw_depth": 127,
+        "simplified_depth": 127,
+        "depth_reduction": 0.0,
+        "raw_nodes": 207,
+        "simplified_nodes": 207,
+        "node_reduction": 0.0,
+        "cse_depth": 50,
+        "cse_nodes": 78,
+        "cse_depth_reduction": 0.6062992125984252,
+        "cse_node_reduction": 0.6231884057971014,
+        "raw_query_s": 0.0007073632004903629,
+        "cse_query_s": 0.0006281391979428008,
+        "query_speedup": 1.1261249143613807,
+        "cache": {
+          "size": 10,
+          "maxsize": 4096,
+          "hits": 177,
+          "misses": 10,
+          "hit_rate": 0.946524064171123
+        }
+      }
+    },
+    {
+      "sample": "sample_39_mixed",
+      "baseline": {
+        "deadended": 18,
+        "constraints": 114,
+        "constraint_depth": 816,
+        "constraint_nodes": 1335,
+        "elapsed_mean": 0.2307300196698634,
+        "elapsed_median": 0.22984940800233744,
+        "elapsed_min": 0.22038809901278
+      },
+      "strategy": {
+        "deadended": 18,
+        "constraints": 114,
+        "constraint_depth": 816,
+        "constraint_nodes": 1335,
+        "elapsed_mean": 0.26036011367007933,
+        "elapsed_median": 0.22746405900397804,
+        "elapsed_min": 0.21908982600143645
+      },
+      "cached": {
+        "deadended": 18,
+        "constraints": 114,
+        "constraint_depth": 816,
+        "constraint_nodes": 1335,
+        "cache": {
+          "size": 24,
+          "maxsize": 4096,
+          "hits": 70,
+          "misses": 24,
+          "hit_rate": 0.7446808510638298
+        },
+        "elapsed_mean": 0.22270690466393717,
+        "elapsed_median": 0.22407988899794873,
+        "elapsed_min": 0.21909291399060749
+      },
+      "micro": {
+        "n_constraints": 114,
+        "uncached_rewrite_s": 5.213830008869991e-05,
+        "cached_rewrite_s": 3.685089905047789e-05,
+        "rewrite_speedup": 1.4148447237957893,
+        "raw_depth": 816,
+        "simplified_depth": 816,
+        "depth_reduction": 0.0,
+        "raw_nodes": 1335,
+        "simplified_nodes": 1335,
+        "node_reduction": 0.0,
+        "cse_depth": 251,
+        "cse_nodes": 381,
+        "cse_depth_reduction": 0.6924019607843137,
+        "cse_node_reduction": 0.7146067415730337,
+        "raw_query_s": 0.0008173679991159589,
+        "cse_query_s": 0.0006980970007134602,
+        "query_speedup": 1.17085161271371,
+        "cache": {
+          "size": 18,
+          "maxsize": 4096,
+          "hits": 1236,
+          "misses": 18,
+          "hit_rate": 0.9856459330143541
+        }
+      }
+    },
+    {
+      "sample": "sample_40_branch",
+      "baseline": {
+        "deadended": 10,
+        "constraints": 50,
+        "constraint_depth": 392,
+        "constraint_nodes": 658,
+        "elapsed_mean": 0.11535306332613497,
+        "elapsed_median": 0.10824845099705271,
+        "elapsed_min": 0.10633095499360934
+      },
+      "strategy": {
+        "deadended": 10,
+        "constraints": 50,
+        "constraint_depth": 392,
+        "constraint_nodes": 658,
+        "elapsed_mean": 0.11363044600390519,
+        "elapsed_median": 0.11594736500410363,
+        "elapsed_min": 0.10861578000185546
+      },
+      "cached": {
+        "deadended": 10,
+        "constraints": 50,
+        "constraint_depth": 392,
+        "constraint_nodes": 658,
+        "cache": {
+          "size": 28,
+          "maxsize": 4096,
+          "hits": 22,
+          "misses": 28,
+          "hit_rate": 0.44
+        },
+        "elapsed_mean": 0.1115261226708147,
+        "elapsed_median": 0.11110524799732957,
+        "elapsed_min": 0.10834811101085506
+      },
+      "micro": {
+        "n_constraints": 50,
+        "uncached_rewrite_s": 1.896839967230335e-05,
+        "cached_rewrite_s": 1.4689299860037863e-05,
+        "rewrite_speedup": 1.2913072680820374,
+        "raw_depth": 392,
+        "simplified_depth": 392,
+        "depth_reduction": 0.0,
+        "raw_nodes": 658,
+        "simplified_nodes": 658,
+        "node_reduction": 0.0,
+        "cse_depth": 180,
+        "cse_nodes": 288,
+        "cse_depth_reduction": 0.5408163265306123,
+        "cse_node_reduction": 0.5623100303951367,
+        "raw_query_s": 0.0009602061996702105,
+        "cse_query_s": 0.0008145038009388372,
+        "query_speedup": 1.1788848604063351,
+        "cache": {
+          "size": 22,
+          "maxsize": 4096,
+          "hits": 528,
+          "misses": 22,
+          "hit_rate": 0.96
+        }
+      }
+    },
+    {
+      "sample": "sample_41_loop",
+      "baseline": {
+        "deadended": 6,
+        "constraints": 30,
+        "constraint_depth": 234,
+        "constraint_nodes": 408,
+        "elapsed_mean": 0.13836385466371817,
+        "elapsed_median": 0.13915503400494345,
+        "elapsed_min": 0.1363567869993858
+      },
+      "strategy": {
+        "deadended": 6,
+        "constraints": 30,
+        "constraint_depth": 234,
+        "constraint_nodes": 408,
+        "elapsed_mean": 0.14525089266438349,
+        "elapsed_median": 0.1408704149944242,
+        "elapsed_min": 0.1363976749998983
+      },
+      "cached": {
+        "deadended": 6,
+        "constraints": 30,
+        "constraint_depth": 234,
+        "constraint_nodes": 408,
+        "cache": {
+          "size": 12,
+          "maxsize": 4096,
+          "hits": 76,
+          "misses": 12,
+          "hit_rate": 0.8636363636363636
+        },
+        "elapsed_mean": 0.1380001186626032,
+        "elapsed_median": 0.1371054949995596,
+        "elapsed_min": 0.13617420599621255
+      },
+      "micro": {
+        "n_constraints": 30,
+        "uncached_rewrite_s": 1.2771299225278199e-05,
+        "cached_rewrite_s": 9.155199222732335e-06,
+        "rewrite_speedup": 1.3949777513925745,
+        "raw_depth": 234,
+        "simplified_depth": 234,
+        "depth_reduction": 0.0,
+        "raw_nodes": 408,
+        "simplified_nodes": 408,
+        "node_reduction": 0.0,
+        "cse_depth": 122,
+        "cse_nodes": 200,
+        "cse_depth_reduction": 0.4786324786324786,
+        "cse_node_reduction": 0.5098039215686274,
+        "raw_query_s": 0.0009378128015669063,
+        "cse_query_s": 0.0009353087982162834,
+        "query_speedup": 1.0026771942650365,
+        "cache": {
+          "size": 10,
+          "maxsize": 4096,
+          "hits": 320,
+          "misses": 10,
+          "hit_rate": 0.9696969696969697
+        }
+      }
+    },
+    {
+      "sample": "sample_42_switch",
+      "baseline": {
+        "deadended": 6,
+        "constraints": 26,
+        "constraint_depth": 188,
+        "constraint_nodes": 301,
+        "elapsed_mean": 0.08335452199874756,
+        "elapsed_median": 0.08413615400786512,
+        "elapsed_min": 0.08031199598917738
+      },
+      "strategy": {
+        "deadended": 6,
+        "constraints": 26,
+        "constraint_depth": 188,
+        "constraint_nodes": 301,
+        "elapsed_mean": 0.08523279733102147,
+        "elapsed_median": 0.08623438999347854,
+        "elapsed_min": 0.08029865600110497
+      },
+      "cached": {
+        "deadended": 6,
+        "constraints": 26,
+        "constraint_depth": 188,
+        "constraint_nodes": 301,
+        "cache": {
+          "size": 18,
+          "maxsize": 4096,
+          "hits": 14,
+          "misses": 18,
+          "hit_rate": 0.4375
+        },
+        "elapsed_mean": 0.0847639013324321,
+        "elapsed_median": 0.08498339299694635,
+        "elapsed_min": 0.08136429599835537
+      },
+      "micro": {
+        "n_constraints": 26,
+        "uncached_rewrite_s": 1.1279300088062882e-05,
+        "cached_rewrite_s": 1.3008300447836518e-05,
+        "rewrite_speedup": 0.8670848381226315,
+        "raw_depth": 188,
+        "simplified_depth": 188,
+        "depth_reduction": 0.0,
+        "raw_nodes": 301,
+        "simplified_nodes": 301,
+        "node_reduction": 0.0,
+        "cse_depth": 68,
+        "cse_nodes": 105,
+        "cse_depth_reduction": 0.6382978723404256,
+        "cse_node_reduction": 0.6511627906976745,
+        "raw_query_s": 0.0010132608003914356,
+        "cse_query_s": 0.000770474597811699,
+        "query_speedup": 1.31511253358553,
+        "cache": {
+          "size": 13,
+          "maxsize": 4096,
+          "hits": 273,
+          "misses": 13,
+          "hit_rate": 0.9545454545454546
+        }
+      }
+    },
+    {
+      "sample": "sample_43_mixed",
+      "baseline": {
+        "deadended": 9,
+        "constraints": 36,
+        "constraint_depth": 264,
+        "constraint_nodes": 456,
+        "elapsed_mean": 0.12784438432815173,
+        "elapsed_median": 0.12631768599385396,
+        "elapsed_min": 0.12593632799689658
+      },
+      "strategy": {
+        "deadended": 9,
+        "constraints": 36,
+        "constraint_depth": 264,
+        "constraint_nodes": 456,
+        "elapsed_mean": 0.1256200599988612,
+        "elapsed_median": 0.126553292007884,
+        "elapsed_min": 0.12324381199141499
+      },
+      "cached": {
+        "deadended": 9,
+        "constraints": 36,
+        "constraint_depth": 264,
+        "constraint_nodes": 456,
+        "cache": {
+          "size": 12,
+          "maxsize": 4096,
+          "hits": 70,
+          "misses": 12,
+          "hit_rate": 0.8536585365853658
+        },
+        "elapsed_mean": 0.12338976167181197,
+        "elapsed_median": 0.12367631400411483,
+        "elapsed_min": 0.1227798620093381
+      },
+      "micro": {
+        "n_constraints": 36,
+        "uncached_rewrite_s": 1.3923300139140338e-05,
+        "cached_rewrite_s": 1.0289299825672061e-05,
+        "rewrite_speedup": 1.3531824686847356,
+        "raw_depth": 264,
+        "simplified_depth": 264,
+        "depth_reduction": 0.0,
+        "raw_nodes": 456,
+        "simplified_nodes": 456,
+        "node_reduction": 0.0,
+        "cse_depth": 147,
+        "cse_nodes": 241,
+        "cse_depth_reduction": 0.44318181818181823,
+        "cse_node_reduction": 0.4714912280701754,
+        "raw_query_s": 0.0010600637993775307,
+        "cse_query_s": 0.0008554408006602899,
+        "query_speedup": 1.2392018226852148,
+        "cache": {
+          "size": 9,
+          "maxsize": 4096,
+          "hits": 387,
+          "misses": 9,
+          "hit_rate": 0.9772727272727273
+        }
+      }
+    },
+    {
+      "sample": "sample_44_branch",
+      "baseline": {
+        "deadended": 8,
+        "constraints": 32,
+        "constraint_depth": 243,
+        "constraint_nodes": 416,
+        "elapsed_mean": 0.09615131666942034,
+        "elapsed_median": 0.09545416600303724,
+        "elapsed_min": 0.09522410100908019
+      },
+      "strategy": {
+        "deadended": 8,
+        "constraints": 32,
+        "constraint_depth": 243,
+        "constraint_nodes": 416,
+        "elapsed_mean": 0.09733565433513529,
+        "elapsed_median": 0.09814737799752038,
+        "elapsed_min": 0.09505938700749539
+      },
+      "cached": {
+        "deadended": 8,
+        "constraints": 32,
+        "constraint_depth": 243,
+        "constraint_nodes": 416,
+        "cache": {
+          "size": 24,
+          "maxsize": 4096,
+          "hits": 18,
+          "misses": 24,
+          "hit_rate": 0.42857142857142855
+        },
+        "elapsed_mean": 0.105737431338639,
+        "elapsed_median": 0.09966252899903338,
+        "elapsed_min": 0.09876640200673137
+      },
+      "micro": {
+        "n_constraints": 32,
+        "uncached_rewrite_s": 1.35394002427347e-05,
+        "cached_rewrite_s": 1.0415200085844844e-05,
+        "rewrite_speedup": 1.2999654477244191,
+        "raw_depth": 243,
+        "simplified_depth": 243,
+        "depth_reduction": 0.0,
+        "raw_nodes": 416,
+        "simplified_nodes": 416,
+        "node_reduction": 0.0,
+        "cse_depth": 180,
+        "cse_nodes": 301,
+        "cse_depth_reduction": 0.2592592592592593,
+        "cse_node_reduction": 0.2764423076923077,
+        "raw_query_s": 0.0008662050007842481,
+        "cse_query_s": 0.000782753000385128,
+        "query_speedup": 1.1066134532324505,
+        "cache": {
+          "size": 18,
+          "maxsize": 4096,
+          "hits": 334,
+          "misses": 18,
+          "hit_rate": 0.9488636363636364
+        }
+      }
+    },
+    {
+      "sample": "sample_45_loop",
+      "baseline": {
+        "deadended": 5,
+        "constraints": 20,
+        "constraint_depth": 155,
+        "constraint_nodes": 270,
+        "elapsed_mean": 0.10873820399865508,
+        "elapsed_median": 0.10765599299338646,
+        "elapsed_min": 0.10619154199957848
+      },
+      "strategy": {
+        "deadended": 5,
+        "constraints": 20,
+        "constraint_depth": 155,
+        "constraint_nodes": 270,
+        "elapsed_mean": 0.11264083266723901,
+        "elapsed_median": 0.11094926501391456,
+        "elapsed_min": 0.10792817099718377
+      },
+      "cached": {
+        "deadended": 5,
+        "constraints": 20,
+        "constraint_depth": 155,
+        "constraint_nodes": 270,
+        "cache": {
+          "size": 10,
+          "maxsize": 4096,
+          "hits": 54,
+          "misses": 10,
+          "hit_rate": 0.84375
+        },
+        "elapsed_mean": 0.10995201332843862,
+        "elapsed_median": 0.1076052229909692,
+        "elapsed_min": 0.10715611198975239
+      },
+      "micro": {
+        "n_constraints": 20,
+        "uncached_rewrite_s": 9.22719918889925e-06,
+        "cached_rewrite_s": 7.2501003160141405e-06,
+        "rewrite_speedup": 1.272699519552586,
+        "raw_depth": 155,
+        "simplified_depth": 155,
+        "depth_reduction": 0.0,
+        "raw_nodes": 270,
+        "simplified_nodes": 270,
+        "node_reduction": 0.0,
+        "cse_depth": 89,
+        "cse_nodes": 147,
+        "cse_depth_reduction": 0.4258064516129032,
+        "cse_node_reduction": 0.4555555555555556,
+        "raw_query_s": 0.0009095840010559187,
+        "cse_query_s": 0.0008911237993743271,
+        "query_speedup": 1.0207156420853676,
+        "cache": {
+          "size": 8,
+          "maxsize": 4096,
+          "hits": 212,
+          "misses": 8,
+          "hit_rate": 0.9636363636363636
+        }
+      }
+    },
+    {
+      "sample": "sample_46_switch",
+      "baseline": {
+        "deadended": 4,
+        "constraints": 10,
+        "constraint_depth": 70,
+        "constraint_nodes": 110,
+        "elapsed_mean": 0.058696029668984316,
+        "elapsed_median": 0.05864883599861059,
+        "elapsed_min": 0.05772214400349185
+      },
+      "strategy": {
+        "deadended": 4,
+        "constraints": 10,
+        "constraint_depth": 70,
+        "constraint_nodes": 110,
+        "elapsed_mean": 0.05813229899892273,
+        "elapsed_median": 0.057976316995336674,
+        "elapsed_min": 0.056918121001217514
+      },
+      "cached": {
+        "deadended": 4,
+        "constraints": 10,
+        "constraint_depth": 70,
+        "constraint_nodes": 110,
+        "cache": {
+          "size": 10,
+          "maxsize": 4096,
+          "hits": 10,
+          "misses": 10,
+          "hit_rate": 0.5
+        },
+        "elapsed_mean": 0.05821050332936769,
+        "elapsed_median": 0.05828107499110047,
+        "elapsed_min": 0.05738175399892498
+      },
+      "micro": {
+        "n_constraints": 10,
+        "uncached_rewrite_s": 6.0550999478437005e-06,
+        "cached_rewrite_s": 5.2130999392829835e-06,
+        "rewrite_speedup": 1.1615161839150405,
+        "raw_depth": 70,
+        "simplified_depth": 70,
+        "depth_reduction": 0.0,
+        "raw_nodes": 110,
+        "simplified_nodes": 110,
+        "node_reduction": 0.0,
+        "cse_depth": 27,
+        "cse_nodes": 41,
+        "cse_depth_reduction": 0.6142857142857143,
+        "cse_node_reduction": 0.6272727272727272,
+        "raw_query_s": 0.0006757583993021399,
+        "cse_query_s": 0.000577721997979097,
+        "query_speedup": 1.1696947695707962,
+        "cache": {
+          "size": 7,
+          "maxsize": 4096,
+          "hits": 103,
+          "misses": 7,
+          "hit_rate": 0.9363636363636364
+        }
+      }
+    },
+    {
+      "sample": "sample_47_mixed",
+      "baseline": {
+        "deadended": 17,
+        "constraints": 140,
+        "constraint_depth": 1074,
+        "constraint_nodes": 1826,
+        "elapsed_mean": 0.27969071367018233,
+        "elapsed_median": 0.273758467999869,
+        "elapsed_min": 0.27317763400787953
+      },
+      "strategy": {
+        "deadended": 17,
+        "constraints": 140,
+        "constraint_depth": 1074,
+        "constraint_nodes": 1826,
+        "elapsed_mean": 0.2849660583403117,
+        "elapsed_median": 0.2778138650028268,
+        "elapsed_min": 0.2711457110126503
+      },
+      "cached": {
+        "deadended": 17,
+        "constraints": 140,
+        "constraint_depth": 1074,
+        "constraint_nodes": 1826,
+        "cache": {
+          "size": 24,
+          "maxsize": 4096,
+          "hits": 108,
+          "misses": 24,
+          "hit_rate": 0.8181818181818182
+        },
+        "elapsed_mean": 0.26651621133593534,
+        "elapsed_median": 0.26769380799669307,
+        "elapsed_min": 0.2631722400110448
+      },
+      "micro": {
+        "n_constraints": 140,
+        "uncached_rewrite_s": 0.00011256969883106649,
+        "cached_rewrite_s": 3.213769959984347e-05,
+        "rewrite_speedup": 3.5027304453245547,
+        "raw_depth": 1074,
+        "simplified_depth": 1074,
+        "depth_reduction": 0.0,
+        "raw_nodes": 1826,
+        "simplified_nodes": 1826,
+        "node_reduction": 0.0,
+        "cse_depth": 413,
+        "cse_nodes": 656,
+        "cse_depth_reduction": 0.6154562383612663,
+        "cse_node_reduction": 0.6407447973713034,
+        "raw_query_s": 0.0009672915999544785,
+        "cse_query_s": 0.000862380801117979,
+        "query_speedup": 1.1216525213693238,
+        "cache": {
+          "size": 19,
+          "maxsize": 4096,
+          "hits": 1521,
+          "misses": 19,
+          "hit_rate": 0.9876623376623377
+        }
+      }
+    },
+    {
+      "sample": "sample_48_branch",
+      "baseline": {
+        "deadended": 16,
+        "constraints": 80,
+        "constraint_depth": 592,
+        "constraint_nodes": 1028,
+        "elapsed_mean": 0.20880307166468506,
+        "elapsed_median": 0.20310761900327634,
+        "elapsed_min": 0.1976873489911668
+      },
+      "strategy": {
+        "deadended": 16,
+        "constraints": 80,
+        "constraint_depth": 592,
+        "constraint_nodes": 1028,
+        "elapsed_mean": 0.18750620266170395,
+        "elapsed_median": 0.18785185400338378,
+        "elapsed_min": 0.1831125369935762
+      },
+      "cached": {
+        "deadended": 16,
+        "constraints": 80,
+        "constraint_depth": 592,
+        "constraint_nodes": 1028,
+        "cache": {
+          "size": 50,
+          "maxsize": 4096,
+          "hits": 34,
+          "misses": 50,
+          "hit_rate": 0.40476190476190477
+        },
+        "elapsed_mean": 0.19887090366197904,
+        "elapsed_median": 0.18671126599656418,
+        "elapsed_min": 0.17659202999493573
+      },
+      "micro": {
+        "n_constraints": 80,
+        "uncached_rewrite_s": 2.8807700437027962e-05,
+        "cached_rewrite_s": 2.3414500174112617e-05,
+        "rewrite_speedup": 1.2303359124820499,
+        "raw_depth": 592,
+        "simplified_depth": 592,
+        "depth_reduction": 0.0,
+        "raw_nodes": 1028,
+        "simplified_nodes": 1028,
+        "node_reduction": 0.0,
+        "cse_depth": 298,
+        "cse_nodes": 485,
+        "cse_depth_reduction": 0.4966216216216216,
+        "cse_node_reduction": 0.5282101167315175,
+        "raw_query_s": 0.001221565800369717,
+        "cse_query_s": 0.0010059504013042897,
+        "query_speedup": 1.214339990108723,
+        "cache": {
+          "size": 39,
+          "maxsize": 4096,
+          "hits": 841,
+          "misses": 39,
+          "hit_rate": 0.9556818181818182
+        }
+      }
+    },
+    {
+      "sample": "sample_49_loop",
+      "baseline": {
+        "deadended": 3,
+        "constraints": 6,
+        "constraint_depth": 45,
+        "constraint_nodes": 78,
+        "elapsed_mean": 0.062409261328866705,
+        "elapsed_median": 0.061596264989930205,
+        "elapsed_min": 0.06049882298975717
+      },
+      "strategy": {
+        "deadended": 3,
+        "constraints": 6,
+        "constraint_depth": 45,
+        "constraint_nodes": 78,
+        "elapsed_mean": 0.06705496632882084,
+        "elapsed_median": 0.06683183199493214,
+        "elapsed_min": 0.061075491990777664
+      },
+      "cached": {
+        "deadended": 3,
+        "constraints": 6,
+        "constraint_depth": 45,
+        "constraint_nodes": 78,
+        "cache": {
+          "size": 6,
+          "maxsize": 4096,
+          "hits": 22,
+          "misses": 6,
+          "hit_rate": 0.7857142857142857
+        },
+        "elapsed_mean": 0.0610079206720305,
+        "elapsed_median": 0.0610217960056616,
+        "elapsed_min": 0.06085821700980887
+      },
+      "micro": {
+        "n_constraints": 6,
+        "uncached_rewrite_s": 4.77210123790428e-06,
+        "cached_rewrite_s": 4.029100819025189e-06,
+        "rewrite_speedup": 1.1844084951586926,
+        "raw_depth": 45,
+        "simplified_depth": 45,
+        "depth_reduction": 0.0,
+        "raw_nodes": 78,
+        "simplified_nodes": 78,
+        "node_reduction": 0.0,
+        "cse_depth": 35,
+        "cse_nodes": 59,
+        "cse_depth_reduction": 0.2222222222222222,
+        "cse_node_reduction": 0.2435897435897436,
+        "raw_query_s": 0.0008859335997840389,
+        "cse_query_s": 0.000859260797733441,
+        "query_speedup": 1.0310415674972668,
+        "cache": {
+          "size": 4,
+          "maxsize": 4096,
+          "hits": 62,
+          "misses": 4,
+          "hit_rate": 0.9393939393939394
+        }
+      }
+    }
+  ]
+}

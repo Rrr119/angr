@@ -1,0 +1,17 @@
+{
+  "root": "/home/dev/feedback/uid34541",
+  "B": "/home/dev/feedback/uid34541",
+  "sha": "a5c2215df6dd26efe51f4624fc3d4c07caa8c80c",
+  "wslDistro": "Ubuntu-26.04",
+  "source": {
+    "owner": "angr",
+    "repo": "angr",
+    "sha": "a5c2215df6dd26efe51f4624fc3d4c07caa8c80c"
+  },
+  "fork": {
+    "owner": "Rrr119",
+    "repo": "angr",
+    "cloneUrl": "https://github.com/Rrr119/angr.git"
+  },
+  "at": "2026-11-23T00:27:32.699Z"
+}

@@ -4,7 +4,7 @@ import functools
 import logging
 import os
 import time
-from typing import Any, TypeVar, overload
+from typing import Any, TypeVar, cast, overload
 
 from angr import claripy
 from angr import sim_options as o
@@ -12,6 +12,13 @@ from angr.errors import SimSolverModeError, SimSolverOptionError, SimUnsatError,
 from angr.sim_state import SimState
 from angr.utils.balancer import constraint_to_si
 
+from .constraint_simplification import (
+    USE_DEFAULT_CACHE,
+    ConstraintSimplificationCache,
+    ConstraintSimplificationStrategy,
+    simplify_constraint,
+    simplify_constraints,
+)
 from .inspect import BP_AFTER, BP_BEFORE
 from .plugin import SimStatePlugin, SupportsMerge
 from .sim_action import SimActionConstraint
@@ -205,7 +212,13 @@ class SimSolver(SimStatePlugin, SupportsMerge):
     """
 
     def __init__(
-        self, solver=None, all_variables=None, temporal_tracked_variables=None, eternal_tracked_variables=None
+        self,
+        solver=None,
+        all_variables=None,
+        temporal_tracked_variables=None,
+        eternal_tracked_variables=None,
+        constraint_simplification_strategy: ConstraintSimplificationStrategy | None = None,
+        constraint_simplification_cache: ConstraintSimplificationCache | None = None,
     ):  # pylint:disable=redefined-outer-name
         super().__init__()
 
@@ -213,6 +226,26 @@ class SimSolver(SimStatePlugin, SupportsMerge):
         self.all_variables = [] if all_variables is None else all_variables
         self.temporal_tracked_variables = {} if temporal_tracked_variables is None else temporal_tracked_variables
         self.eternal_tracked_variables = {} if eternal_tracked_variables is None else eternal_tracked_variables
+        # Per-state overrides for the path-constraint simplification pipeline.
+        # ``None`` means "use the process-wide defaults", which preserves the
+        # historical behavior unless CONSTRAINT_SIMPLIFICATION is enabled.
+        self.constraint_simplification_strategy: ConstraintSimplificationStrategy | None
+        self.constraint_simplification_cache: ConstraintSimplificationCache | None
+        self.constraint_simplification_strategy = constraint_simplification_strategy
+        self.constraint_simplification_cache = constraint_simplification_cache
+
+    def _simplify_path_constraint(self, constraint):
+        use_cache = o.CONSTRAINT_SIMPLIFICATION_CACHE in self.state.options
+        cache = (
+            self.constraint_simplification_cache
+            if self.constraint_simplification_cache is not None
+            else USE_DEFAULT_CACHE
+        )
+        return simplify_constraint(
+            constraint,
+            strategy=self.constraint_simplification_strategy,
+            cache=cache if use_cache else None,
+        )
 
     def reload_solver(self, constraints=None):
         """
@@ -464,12 +497,17 @@ class SimSolver(SimStatePlugin, SupportsMerge):
 
     @SimStatePlugin.memo
     def copy(self, memo):  # pylint: disable=unused-argument
-        c = super().copy(memo)
+        c = cast(SimSolver, super().copy(memo))
 
         c._stored_solver = self._solver.branch()
         c.all_variables = self.all_variables
         c.temporal_tracked_variables = self.temporal_tracked_variables
         c.eternal_tracked_variables = self.eternal_tracked_variables
+        # Strategy objects are stateless and the cache is deliberately shared
+        # across forks: a child state re-walks most of its parent's path prefix,
+        # so shared cache entries are the common case.
+        c.constraint_simplification_strategy = self.constraint_simplification_strategy
+        c.constraint_simplification_cache = self.constraint_simplification_cache
 
         return c
 
@@ -692,9 +730,17 @@ class SimSolver(SimStatePlugin, SupportsMerge):
             raise Exception("Tuple or list passed to add!")
 
         if o.TRACK_CONSTRAINTS in self.state.options and len(constraints) > 0:
-            constraints = (
-                [self.simplify(a) for a in constraints] if o.SIMPLIFY_CONSTRAINTS in self.state.options else constraints
-            )
+            if o.CONSTRAINT_SIMPLIFICATION in self.state.options:
+                # The solver-free strategy is an additional, equivalence-preserving
+                # pass. It composes with the legacy SIMPLIFY_CONSTRAINTS option rather
+                # than replacing it.
+                constraints = tuple(self._simplify_path_constraint(a) for a in constraints)
+                if o.SIMPLIFY_CONSTRAINTS in self.state.options:
+                    constraints = tuple(self.simplify(a) for a in constraints)
+            elif o.SIMPLIFY_CONSTRAINTS in self.state.options:
+                constraints = tuple(self.simplify(a) for a in constraints)
+            else:
+                constraints = tuple(constraints)
 
             self.state._inspect("constraints", BP_BEFORE, added_constraints=constraints)
             constraints = self.state._inspect_getattr("added_constraints", constraints)
@@ -1138,6 +1184,33 @@ class SimSolver(SimStatePlugin, SupportsMerge):
         ):
             return e
         return self._claripy_simplify(e)
+
+    def simplify_constraints(self, eliminate_common_subexpressions: bool = True):
+        """
+        Rewrite this state's full path-constraint set with the configurable
+        simplification strategy.
+
+        Per-constraint rewrites are always applied; when
+        ``eliminate_common_subexpressions`` is True, compound subexpressions
+        shared across the constraint set are additionally factored into named
+        symbols bound by defining equalities. The resulting set is logically
+        equivalent to the original and is loaded back into the solver in place.
+        The method returns the number of stored constraints after rewriting.
+        """
+        use_cache = o.CONSTRAINT_SIMPLIFICATION_CACHE in self.state.options
+        cache = (
+            self.constraint_simplification_cache
+            if self.constraint_simplification_cache is not None
+            else USE_DEFAULT_CACHE
+        )
+        rewritten = simplify_constraints(
+            list(self._solver.constraints),
+            strategy=self.constraint_simplification_strategy,
+            cache=cache if use_cache else None,
+            eliminate_common_subexpressions=eliminate_common_subexpressions,
+        )
+        self.reload_solver(constraints=rewritten)
+        return len(rewritten)
 
     @timed_function
     @ast_stripping_decorator
